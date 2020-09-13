@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './CSS/Applicant.css'
 
-function Applicant(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+
+class Applicant extends Component {
+   
+    
+    render() {
+        return (
+            <div className="Applicant">
+                
+            </div>
+        );
+    }
 }
 
 export default Applicant;
