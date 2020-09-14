@@ -1,0 +1,16 @@
+.FloorPlan{
+    background-image: url("https://housely.com/wp-content/uploads/2016/09/Renovation-of-an-Apartment-in-Paris-open-floor-plan.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    width: 100%;
+    
+    margin: 0;    
+}
+.card{
+   margin: 10%;
+   margin-bottom: 2%;
+}
+
+

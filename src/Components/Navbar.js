@@ -8,7 +8,7 @@ import Resident from './Resident';
 import Contact from './Contact';
 import Map from './Map'
 import Home from './Home'
-import './CSS/Navbar.css'
+import '../CSS/Navbar.css'
 
 
 function Navbar(props) {

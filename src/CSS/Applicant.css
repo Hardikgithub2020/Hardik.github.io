@@ -5,4 +5,16 @@
     height: 100vh;
     width: 100%;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.applicant-form{
+   
+    border: solid 2px silver;
+    background-color: steelblue;
+    padding: 50px;
+    
+
 }
