@@ -1,20 +1,13 @@
-.Photo{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-items: flex-start;
-    align-content: space-around;
+.photo{
+background-color: teal;
+}
+.carousel-inner{
+    
+    width:100%;
   
+  }
+  .carousel-inner>div>img{
+    height:90vh;
+}
 
-}
-.Photo>img:hover{
-    transform: scale(1.5);
-}
-
-.Photo > img {
-    width: 25%;
-    height: 30vh;
-    margin: 3%;
-    border: solid 2px silver;
-}
+  

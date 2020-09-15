@@ -1,8 +1,31 @@
-.Contact{
+.contact{
     background-image: url("https://st.hzcdn.com/simgs/18e1d30a0b51f353_9-6455/home-design.jpg");
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm{
+   
+   
+    background-color: white;
+    padding: 50px;
+    
+
+}
+.contactInfo{
+   
+   
+    background-color: white;
+  
+    padding: 50px;
+  
+   
+    
+
 }

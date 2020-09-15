@@ -22,7 +22,7 @@ class Resident extends Component {
         event.preventDefault();
     }
     render() {
-        const {userInfo}=this.props.userData;
+        
         return (
             <div className="Resident">
                 

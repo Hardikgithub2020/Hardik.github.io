@@ -1,9 +1,14 @@
 .Home-Page{
-
     background: url("https://ar.rdcpix.com/1708099119/b3098a698e8545c7e3fbfc041adae497c-f0xd-w1020_h770_q80.jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 91vh;
     width: 100%;
     margin: 0;
+}
+.welcome-tag{
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch,  Route} from 'react-router-dom'
 import Amenities from './Amenities';
 import Applicant from './Applicant';
 import FloorPlan from './FloorPlan';
@@ -8,6 +8,12 @@ import Resident from './Resident';
 import Contact from './Contact';
 import Map from './Map';
 import Home from './Home'
+
+// ===========================================
+
+// Made using BOOTSTRAP CLASS
+// ===========================================
+
 
 function NewNavBar(props) {
   return (
@@ -42,9 +48,10 @@ function NewNavBar(props) {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/Applicants">
-              Contact US
+              Applicant
               </a>
-            </li><li class="nav-item">
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/FloorPlan">
               FloorPlan
               </a>
@@ -62,6 +69,11 @@ function NewNavBar(props) {
             <li class="nav-item">
               <a class="nav-link" href="/Resident">
                 Resident
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Contact">
+              Contact us
               </a>
             </li>
           </ul>
@@ -90,7 +102,6 @@ function NewNavBar(props) {
   <Route path="/Contact">
     <Contact />
   </Route>
-
   <Route exact path="/">
     <Home />
   </Route>

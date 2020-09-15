@@ -12,7 +12,7 @@ class Applicant extends Component {
             user_lastName: "",
             user_email: "",
             user_phoneNumber: "",
-            user_message: "",
+            user_password: "",
         };
     }
 
@@ -28,8 +28,7 @@ class Applicant extends Component {
         return (
             <div className="Applicant">
                 <div className="applicant-form">
-                    <h1>Welcome {userInfo.user_firstName}</h1>
-                    <h1>How can we help you?</h1>
+                    <h1>REGISTER HERE {userInfo.user_firstName}</h1>
                     <form class="needs-validation" onSubmit={this.handleSubmit} novalidate >
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
@@ -77,43 +76,13 @@ class Applicant extends Component {
                             <div class="invalid-tooltip">Please provide a valid number.</div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea
-                                name="message"
-                                class="form-control"
-                                id="exampleFormControlTextarea1"
-                                rows="3"
-                                value={this.state.user_message}
-                                onChange={(e) =>
-                                    this.setState({ user_message: e.target.value })
-                                }
-                            ></textarea>
+                            <label for="exampleFormControlTextarea1">Password</label>
+                            <input name="message" type="password" class="form-control" id="exampleFormControlTextarea1"
+                                 value={this.state.user_password} onChange={(e) =>this.setState({ user_password: e.target.value })}/>
                         </div>
-                        <button class="btn btn-primary" type="submit">
-                            Submit form
-            </button>
+                        <button class="btn btn-primary" type="submit" color="red">Submit form</button>
                     </form>
                 </div>
-
-                {/* <form onSubmit={this.handleSubmit}>
-                   
-                    <div className= 'applicant-form'>
-                        <h1>How can we help you?</h1>
-                        <br/>
-                        First Name <br/>
-                        <input type="text" value={this.state.user_firstName} onChange={(e)=>this.setState({user_firstName : e.target.value})}/>
-                        <br/>Last Name <br/>
-                        <input type="text" value={this.state.user_lastName} onChange={(e)=>this.setState({user_lastName : e.target.value})}/>
-                        <br/>Email <br/>
-                        <input type="text" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})}/>
-                        <br/>Message<br/>
-                        <input type="text" size="100" value={this.state.user_message} onChange={(e)=>this.setState({user_message : e.target.value})}/>
-                        <br/>
-                        
-                        <input type="submit"/>
-                    </div>
-
-                </form>     */}
             </div>
         );
     }

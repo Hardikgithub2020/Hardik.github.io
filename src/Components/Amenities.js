@@ -5,7 +5,7 @@ function Amenities(props) {
     return (
         <div className='aminities' >
             <div class="container-fluid" style={{background:'white'}}>
-            <h1>AMENITIES</h1>
+            <h1 style={{fontFamily:'fantasy',margin:'8%'}}>AMENITIES</h1>
             
             <div className="aminities-Container" >
             

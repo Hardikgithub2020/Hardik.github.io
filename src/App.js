@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import { connect } from 'react-redux';
 import NewNavBar from './Components/NewNavBar';
 
