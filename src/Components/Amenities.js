@@ -3,12 +3,14 @@ import '../CSS/Aminities.css'
 
 function Amenities(props) {
     return (
-        <div className='aminities' >
+        <div className="aminities" >
+           
             <div class="container-fluid" style={{background:'white'}}>
             <h1 style={{fontFamily:'fantasy',margin:'8%'}}>AMENITIES</h1>
             
             <div className="aminities-Container" >
-            
+            <div class="card-group">
+            <div class="card-body">
             <div className="community-Aminities" class='container'>
                 <h3>COMMUNITY </h3>
                 <ul>
@@ -30,6 +32,8 @@ function Amenities(props) {
                     <li>TOP RATED Community by Apartment Ratings</li>
                 </ul>
             </div>
+            </div>
+            <div class="card-body">
             <div className="apartment-Aminities" class='container'>
                 <h3>APARTMENT </h3>
                 <ul>
@@ -47,15 +51,20 @@ function Amenities(props) {
                     <li>W/D Hookup</li>
                 </ul>
             </div>
+            </div>
+            <div class="card-body">
             <div className="pet-Policy" class='container'>
                 <h3>PET POLICY</h3>
                 <ul className="pet-Policy-ul">
                     <li>Cats - 2 allowed, One time Fee $250.00, Rent $35.0</li>
                     <li>Dogs - 2 allowed, One time Fee $250.00, Rent $35.00</li>
                 </ul>
+                </div>
+                </div>
             </div> 
             </div> 
             </div> 
+            
         </div>
     );
 }

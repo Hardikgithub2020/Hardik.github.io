@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 function FloorPlan(props) {
   return (
     <div className="FloorPlan">
+      <div class="card-group">
        <div class="card-deck">
         <div class="card">
           <img
@@ -92,6 +93,7 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
