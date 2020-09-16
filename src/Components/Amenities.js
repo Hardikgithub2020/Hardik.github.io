@@ -6,7 +6,7 @@ function Amenities(props) {
         <div className="aminities" >
            
             <div class="container-fluid" style={{background:'white'}}>
-            <h1 style={{fontFamily:'fantasy',margin:'8%'}}>AMENITIES</h1>
+            <h1 style={{fontFamily:'fantasy',margin:'5%'}}>AMENITIES</h1>
             
             <div className="aminities-Container" >
             <div class="card-group">

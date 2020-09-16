@@ -76,9 +76,20 @@ function NewNavBar(props) {
               Contact us
               </a>
             </li>
+            <li>
+            <span id="office-phone" style={{background:"none",opacity:"0.2",marginTop:"30px"}}>
+            <h1 style={{fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1>                         
+            </span>
+            </li>
+            <li>
+            
+             </li>
+            
           </ul>
         </div>
       </nav>
+    
+     
   
 <Switch>
   <Route path="/Amenities">

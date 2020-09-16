@@ -9,7 +9,7 @@ function Home(props) {
     return (
         <div className="Home-Page">
             <div className= "welcome-tag">
-            <h1>WELCOME TO RESERVATION</h1>
+            <h1 style={{fontFamily:"fantasy", color:"white", padding:"10vh",fontStretch:"ultra-expanded"}}>WELCOME TO RESERVATION</h1>
             </div>
             <About/>
             <Photo/>
