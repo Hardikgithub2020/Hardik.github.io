@@ -6,8 +6,18 @@ export const initialState={
     user_email : 'fakr@email',
     user_phoneNumber:'000-000-0000',
     user_message :'Welcome'},            
-    registration: false,
-    hasErrors: false
+
+    applicationInfo:{
+           firstName:'',
+           lastName:'',
+           email:'',
+           phone:'',
+           apartmentType:'',
+           startingDate:'',
+           leaseDuration:'',
+           numberOfResident:'',
+           occupation:''
+    }
 }
 
 export default function userReducer(state=initialState, action){
@@ -19,6 +29,13 @@ export default function userReducer(state=initialState, action){
             return{...state, userInfo:action.payload, registration: true, hasErrors:false};
 
         case actions.GET_REGISTRATION_FAILURE:
+            return{...state, registration: false, hasErrors: true};
+        
+        case actions.GET_APPLICATION_SUCCESS:
+            console.log(action.payload);
+            return{...state, AaplicationInfo:action.payload, hasErrors:false};
+
+        case actions.GET_APPLICATION_FAILURE:
             return{...state, registration: false, hasErrors: true};
             
         default:

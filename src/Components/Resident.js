@@ -1,56 +1,54 @@
 import React, { Component } from 'react';
-import '../CSS/Applicant.css'
-import { connect } from 'react-redux';
-import * as actions from '../actions/userActions';
+//import '../CSS/Resident.css'
+import SignInForm from './SignInForm';
 
 
 class Resident extends Component {
-    constructor(props){
-        super(props);
-       
-        this.state={
-            user_firstName : '',
-            user_lastName :'',
-            user_email : '',
-            user_password :'',
-        };
-    }
-    
-    handleSubmit=(event)=>{
-
-        this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-        event.preventDefault();
-    }
+  
     render() {
-        
+        let message="RESTDENT PORTAL"
+        let alertMessage="Successfully login"
         return (
-            <div className="Resident">
-                
-                <form onSubmit={this.handleSubmit}>
-                   
-                    <div className= 'applicant-form'>
-                        <h1>RESIDENT PORTAL</h1>
-                        <br/>
-                        First Name <br/>
-                        <input type="text" value={this.state.user_firstName} onChange={(e)=>this.setState({user_firstName : e.target.value})}/>
-                        <br/>Last Name <br/>
-                        <input type="text" value={this.state.user_lastName} onChange={(e)=>this.setState({user_lastName : e.target.value})}/>
-                        <br/>Email <br/>
-                        <input type="text" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})}/>
-                        <br/>Password<br/>
-                        <input type="password" value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
-                        <br/>
-                        <input type="submit"/>
-                    </div>
 
-                </form>    
+                <div className="card">
+                    <div className="card-group">
+                        <h3>
+                            Welcome to Resident Services
+                        </h3>
+                    </div>
+                <div className="card-group" >
+                    <div className='card-body'>
+                        <div style={{backgroundColor:"#e4f0ee"}}>
+                        <SignInForm message={message} alertMessage={alertMessage}/> 
+                        </div>   
+                    </div>
+                    <div className='card-body'>
+                        <div className='card-body'>
+                            <div class="media" id="rentPaymentsWrap">
+                                <div class="pull-left">
+                                    <img src="https://cdngeneral.rentcafe.com/images/money.png" alt=""/>
+                                </div>
+                                <div class="media-body">
+                                    <h2 class="media-heading"> Make Payments </h2>
+                                    <p>Pay online, check the status of your payments and review your payment history.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='card-body'>
+                            <div class="media" id="maintReqWrap">
+                                <div class="pull-left">
+                                    <img src="https://cdngeneral.rentcafe.com/images/resources.png" alt=""/>
+                                </div>
+                                <div class="media-body">
+                                    <h2 class="media-heading">Maintenance Requests</h2>
+                                    <p>Submit online maintenance requests.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
 }
-const mapStateToProps = (state) => {
-    
-    return state;
-};
-
-export default connect(mapStateToProps)(Resident);
+export default Resident;

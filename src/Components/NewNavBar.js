@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Switch,  Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Link, Route, useHistory} from 'react-router-dom'
 import Amenities from './Amenities';
 import Applicant from './Applicant';
 import FloorPlan from './FloorPlan';
@@ -8,6 +8,8 @@ import Resident from './Resident';
 import Contact from './Contact';
 import Map from './Map';
 import Home from './Home'
+import ApplicationForm from "./ApplicationForm";
+
 
 // ===========================================
 
@@ -16,6 +18,8 @@ import Home from './Home'
 
 
 function NewNavBar(props) {
+  const history = useHistory();
+  console.log(history);
   return (
     <div>
          <Router>
@@ -32,54 +36,55 @@ function NewNavBar(props) {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          {/* <a class="navbar-brand" href="#">
-            <h1>REGISTRATION</h1>
-          </a> */}
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">
-                Home <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Amenities">
-              Amenities
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Applicants">
-              Applicant
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/FloorPlan">
-              FloorPlan
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Map">
-              Map
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Photo">
-              Photo
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Resident">
-                Resident
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Contact">
-              Contact us
-              </a>
-            </li>
-            <li>
-            <span id="office-phone" style={{background:"none",opacity:"0.2",marginTop:"30px"}}>
+        <span id="office-phone" style={{background:"none",opacity:"0.2",marginTop:"30px"}}>
             <h1 style={{fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1>                         
             </span>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <Link class="nav-link" to="/">
+                Home <span class="sr-only">(current)</span>
+                </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Amenities">
+              Amenities
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Applicant">
+              Applicant
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/FloorPlan">
+              FloorPlan
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Map">
+              Map
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Photo">
+              Photo
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Resident">
+                Resident
+                </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/Contact">
+              Contact us
+              </Link>
+            </li>
+            <li>
+            <Link class="nav-link" to="/ApplicationForm">
+              ApplicationForm
+              </Link>
+            
             </li>
             <li>
             
@@ -95,8 +100,8 @@ function NewNavBar(props) {
   <Route path="/Amenities">
     <Amenities />
   </Route>
-  <Route path="/Applicants">
-    <Applicant />
+  <Route exact path="/Applicant">
+    <Applicant  pathHistory={history}/>
   </Route>
   <Route path="/FloorPlan">
     <FloorPlan />
@@ -113,10 +118,15 @@ function NewNavBar(props) {
   <Route path="/Contact">
     <Contact />
   </Route>
+  <Route path="/ApplicationForm">
+    <ApplicationForm />
+  </Route>
   <Route exact path="/">
     <Home />
   </Route>
+
 </Switch>
+
 </Router>
 </div>
   );

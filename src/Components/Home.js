@@ -4,6 +4,8 @@ import Amenities from './Amenities';
 import Photo from './Photo';
 import Applicant from './Applicant';
 import About from './About';
+import ContactForm from './ContactForm';
+import ContactInformation from './ContactInformation';
 
 function Home(props) {
     return (
@@ -14,7 +16,8 @@ function Home(props) {
             <About/>
             <Photo/>
             <Amenities/>
-            <Applicant/>   
+            <Applicant/> 
+            <ContactInformation/>  
         </div>
     );
 }

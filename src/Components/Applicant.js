@@ -1,87 +1,114 @@
 import React, { Component } from "react";
 import "../CSS/Applicant.css";
 import { connect } from "react-redux";
-import * as actions from "../actions/userActions";
+//import * as actions from "../actions/userActions";
+//import ContactForm from "./ContactForm";
+import {Link} from "react-router-dom";
+import {CreateHistory} from './CreateHistory'
+
+
 
 class Applicant extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            user_firstName: "",
-            user_lastName: "",
-            user_email: "",
-            user_phoneNumber: "",
-            user_password: "",
-        };
+       this.state={
+            user_email : '',
+            user_password :'',
+            save_email:'Hardik@mail',
+            save_password:"1234",
+            error: false,
+            login: false };
+            this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
+    
+handleSubmit= (event) =>{
+       
+        const { user_email, user_password ,save_email,save_password} = this.state;
+    
+        const history= this.props.pathHistory;// i propd passed in navbar
+    
+        this.setState({ error: false });
 
-    handleSubmit = (event) => {
-        this.props.dispatch({
-            type: actions.GET_REGISTRATION_SUCCESS,
-            payload: this.state,
-        });
-        event.preventDefault();
-    };
+        console.log("you're logged in. yay!");
+        if (!(user_email === save_email && user_password === save_password)) {
+           this.setState({ error: true,login:false });
+           alert("login failed")
+        }else{
+            
+            console.log("you're logged in. yay!");
+            console.log("History: ",history);
+            alert("login successful")
+            this.setState({ error: false,login:true });
+           history.push("/ApplicationForm");
+
+        }
+
+        // event.preventdefault();
+       
+    
+       
+        // //store.set('loggedIn', true);
+        //  //alert(this.props.alertMessage);
+        //  this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
+        // // event.preventDefault();
+        //  console.log(this.props);
+        //  //
+      }
+    
+    handleChange(e, { name, value }) {
+        this.setState({ [name]: value });
+      }
+   
+   
     render() {
-        const { userInfo } = this.props.userData;
+        
         return (
             <div className="Applicant">
-                <div className="applicant-form">
-                    <h1>REGISTER HERE {userInfo.user_firstName}</h1>
-                    <form class="needs-validation" onSubmit={this.handleSubmit} novalidate >
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationTooltip01">First name</label>
-                                <input name="firstName" type="text" class="form-control" id="validationTooltip01" value={this.state.user_firstName}
-                                    onChange={(e) => this.setState({ user_firstName: e.target.value })} required />
-                                <div class="valid-tooltip">Looks good!</div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validationTooltip02">Last name</label>
-                                <input
-                                    name="lastName"
-                                    type="text"
-                                    class="form-control"
-                                    id="validationTooltip02"
-                                    value={this.state.user_lastName}
-                                    onChange={(e) =>this.setState({ user_lastName: e.target.value })} required/>
-                                <div class="valid-tooltip">Looks good!</div>
-                            </div>
+
+                <div className="card">
+                    <div className="card-group" >
+                        <h3 style={{fontFamily:"fantasy"}}>LOG - IN</h3>
+                    </div>
+                    <div className="card-group" >
+                        <div className='card-body'>
+                            <div style={{backgroundColor:"#ededed"}}>
+                                <div class="card-body">
+                                    <form onSubmit={this.handleSubmit}>
+                                        <div class="form-group">
+                                            <label for="InputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <Link to="/Applicants/ApplicationForm" onClick={this.handleSubmit}>
+                                            submit2
+                                        </Link>
+                                    </form> 
+                                </div> 
+                            </div>   
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
-                            <input
-                                name="email"
-                                type="email"
-                                class="form-control"
-                                id="exampleFormControlInput1"
-                                placeholder="name@example.com"
-                                value={this.state.user_email}
-                                onChange={(e) => this.setState({ user_email: e.target.value })}
-                            />
+                        <div className="card-body Center">
+                            <div className="card-body text-left">
+                            <h2 className="card-title">Register for a Fast, Easy Application</h2>
+                            <p className="card-text">With a free account, you can:</p>               
+                            <ul>
+                                <li>Save your application and log in at any time to continue.</li>
+                                <li>Check the status of your applications.</li>
+                                <li>Use your account with multiple applications.</li>
+                            </ul>
+                            <a href="#">Register Now</a>
+                            </div>  
                         </div>
-                        <div class="form-group">
-                            <label for="validationTooltip10">Phone</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="validationTooltip10"
-                                value={this.state.user_phoneNumber}
-                                onChange={(e) =>
-                                    this.setState({ user_phoneNumber: e.target.value })
-                                }
-                                required
-                            />
-                            <div class="invalid-tooltip">Please provide a valid number.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Password</label>
-                            <input name="message" type="password" class="form-control" id="exampleFormControlTextarea1"
-                                 value={this.state.user_password} onChange={(e) =>this.setState({ user_password: e.target.value })}/>
-                        </div>
-                        <button class="btn btn-primary" type="submit" color="red">Submit form</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         );
