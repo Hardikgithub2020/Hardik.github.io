@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import '../CSS/Explore.css'
-//const API_KEY = process.env.REACT_APP_API_KEY;
+
 
 export default class Explore extends Component {
     constructor(props) {
@@ -12,6 +12,19 @@ export default class Explore extends Component {
             collections:[]
         }
     }
+    sendGetRestaurant = async () => {
+      try {
+          const resp = await axios.get('https://developers.zomato.com/api/v2.1/search?lat=39.103119&lon=-84.512016',{
+              headers: {"user-key": "a725a13c0e61675a1eb07e3df050cd20"}
+            });
+            this.setState({restaurants: resp.data.restaurants})
+          console.log(this.state.restaurants);
+          
+      } catch (err) {
+          console.error(err);
+      }
+      
+  }
     async componentDidMount() {
         // try{
         //     const attractionResponse = await axios({
@@ -69,22 +82,25 @@ export default class Explore extends Component {
 
         // =====================================
 
-        try{
-              const zomataResponse = await axios({
-                method: 'GET',
-                url: 'https://developers.zomato.com/api/v2.1/collections?city_id=1030&count=50',
-                headers: {
-                  "user-key": "a725a13c0e61675a1eb07e3df050cd20",
-                  "content-type": "application/json"
-                }
-              })
-               console.log(zomataResponse.data.collections);
-               this.setState({collections:zomataResponse.data.collections})
-          }catch(e){
-          console.log("Error",e);
-          };
+        // try{
+        //       const zomataResponse = await axios({
+        //         method: 'GET',
+        //         url: 'https://developers.zomato.com/api/v2.1/collections?city_id=1030&count=50',
+        //         headers: {
+        //           "user-key": "a725a13c0e61675a1eb07e3df050cd20",
+        //           "content-type": "application/json"
+        //         }
+        //       })
+        //        console.log(zomataResponse.data.collections);
+        //        this.setState({collections:zomataResponse.data.collections})
+        //   }catch(e){
+        //   console.log("Error",e);
+        //   };
 
+        this.sendGetRestaurant();
     }
+    
+    
 
       render() {
 
@@ -115,19 +131,20 @@ export default class Explore extends Component {
       //     );
       // });
       
-    const displayDataForCollections = this.state.collections.map((res,i) =>{
+  let displayDataForRestaurants = this.state.restaurants.map((res,i) =>{
          
       return (
           
-        <div className="collections card"   key={i}>
-          <h4 className="card-title" >{res.collection.title}</h4>
-          <img src={"res.collection.image_url"} alt="collectionImage"/>
-          <div className="card-body"> 
-           
-          <p className="card-text">{res.collection.description}</p>
+        <div className="collections card text-white text-left bg-info mb-3" style={{maxWidth: "18rem",margin:"3px"}}  key={i}>
+          <h4 className="card-header" >{res.restaurant.name}</h4>
+          <div className="card-body">
+          <p className="card-text">Services:{res.restaurant.highlights.toString()}</p>  
+          <p className="card-text">Street:{res.restaurant.location.address}</p> 
+          <p className="card-text">Phone Number:{res.restaurant.phone_numbers}</p>
+          <p className="card-text">Locality:{res.restaurant.location.locality}</p>
           </div> 
           <div className="card-footer">
-            <small className="text-muted"><a href={"res.collection.url"}>{res.collection.share_url}</a></small>
+          <p className="card-text">Cuisines:{res.restaurant.cuisines}</p>
           </div>
         </div>
         
@@ -135,10 +152,12 @@ export default class Explore extends Component {
     });
     
     return (
-          <div>
-            <h1 id="explore-header">Explore nearby restaurants and attractions.</h1>
-
-            {displayDataForCollections}
+          <div >
+            <h1 id="explore-header">Explore nearby restaurants</h1>
+              <div className="explore row row-cols-1 row-cols-md-4">
+              {displayDataForRestaurants}
+              </div>
+            
           </div>
       )
     }

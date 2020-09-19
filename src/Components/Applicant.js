@@ -105,7 +105,7 @@ handleSubmit= (event) =>{
                                 <li>Check the status of your applications.</li>
                                 <li>Use your account with multiple applications.</li>
                             </ul>
-                            <a href="#">Register Now</a>
+                            <a href="">Register Now</a>
                             </div>  
                         </div>
                     </div>
