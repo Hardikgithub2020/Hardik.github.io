@@ -1,79 +1,83 @@
-
-import React, { Component } from "react";
-import * as actions from "../actions/userActions";
+import React, { Component } from 'react';
 import axios from 'axios'
-
-class ApplicationForm extends Component {
-    constructor(props) {
-        super(props);
-       this.state={
-           firstName:'',
-           lastName:'',
-           email:'',
-           phone:'',
-           apartmentType:'',
-           startingDate:'',
-           leaseDuration:'',
-           numberOfResident:'',
-           occupation:''
-       }
-       this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this); 
-    this.onSubmit = this.onSubmit.bind(this);     
+export default class EditReservation extends Component {
+  constructor(props) {
+    super(props);
+    this.state ={
+        id: window.location.pathname.split("/")[2],
+        reserve: [],
+        firstName:"",
+        lastName:"",
+        email:"",
+        phone:"",
+        apartmentType:"",
+        startingDate:"",
+        leaseDuration:"",
+        numberOfResident:"",
+        occupation:""      
     }
-    
-    handleSubmit= (event) =>{
-       
-        
-        alert("Your application is submitted successfully, our representative contact you within two days");
-        this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-        // event.preventdefault();
-       //store.set('loggedIn', true);
-         //alert(this.props.alertMessage);
-        //  this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-        // event.preventDefault();
-        // console.log(this.props); 
-      }
-    
-    handleChange= (event) => {
-        let {name,value} = event.target;
-        this.setState({ [name]: value });
-      }
-
-      onSubmit=(event) =>{
-        alert("Your application is submitted successfully, our representative contact you within two days");
-        event.preventDefault();
-        let formData = {
-            firstName : this.state.firstName,
-            lastName : this.state.lastName,
-            email : this.state.email,
-            phone : this.state.phone,
-            apartmentType : this.state.apartmentType,
-            startingDate : this.state.startingDate,
-            leaseDuration : this.state.leaseDuration,
-            occupation : this.state.occupation,
-            numberOfResident : this.state.numberOfResident,
-
-        };
-        this.postAPI(formData);
-    }
-    postAPI = async (formData) =>{
-        console.log(formData)
-        try{
-                const response = await axios.post("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications", formData
-                );
-                console.log(response.data);
-                this.setState({reserve: response.data})
-                // this.props.history.push('/reserve/');
-            }
-        catch(e){
-                console.log("Error", e)
-            }
+  }
+  async componentDidMount() {
+      console.log(this.state.id)
+    try{
+            const response = await axios.get("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+this.state.id)
+            console.log(response.data);
+            this.setState({
+                firstName : response.data.firstName,
+                lastName : response.data.lastName,
+                email : response.data.email,
+                phone : response.data.phone,
+                apartmentType : response.data.apartmentType,
+                startingDate : response.data.startingDate,
+                leaseDuration : response.data.leaseDuration,
+                occupation : response.data.occupation,
+                numberOfResident : response.data.numberOfResident,
+            })
         }
-   
-    render(){ 
-        return (
-            <div className="ApplicationForm">
+    catch(e){
+            console.log("Error", e)
+        }
+    }
+  handleChange = (event) =>{
+    event.preventDefault();
+    console.log("handlechange", event.target.value)
+    this.setState({
+      [event.target.name]:event.target.value
+    });
+}
+onSubmit=(event) =>{
+    alert("Your changes are saved");
+    event.preventDefault();
+    let formData = {
+        firstName : this.state.firstName,
+        lastName : this.state.lastName,
+        email : this.state.email,
+        phone : this.state.phone,
+        apartmentType : this.state.apartmentType,
+        startingDate : this.state.startingDate,
+        leaseDuration : this.state.leaseDuration,
+        occupation : this.state.occupation,
+        numberOfResident : this.state.numberOfResident,
+    };
+    this.postAPI(formData);
+}
+postAPI = async (formData) =>{
+    console.log(formData)
+    try{
+            const response = await axios.put("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+window.location.pathname.split("/")[2], formData
+            );
+            console.log(response.data);
+            this.props.history.push('/manageReservation/');
+        }
+    catch(e){
+            console.log("Error", e)
+        }
+    }
+   render(){
+    console.log(this.state.id)
+       return(
+        <React.Fragment>
+             <div className="ApplicationForm">
                <div className="card">
                     <div className="card-group" >
                         <h3 style={{fontFamily:"fantasy"}}>Application Form</h3>
@@ -141,10 +145,9 @@ class ApplicationForm extends Component {
                        
                     </div>                   
                 </div>
-            </div>                     
-        )
-    }
+            </div>  
+
+  </React.Fragment>
+       );
+   }
 }
-
-
-export default ApplicationForm;

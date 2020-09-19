@@ -3,7 +3,7 @@ import '../CSS/Contact.css';
 
 import { connect } from "react-redux";
 import * as actions from "../actions/userActions";
-import ContactInformation from "./ContactInformation";
+//import ContactInformation from "./ContactInformation";
 
 class ContactForm extends Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class ContactForm extends Component {
         // event.preventDefault();
     };
     render() {
-        const { userInfo } = this.props.userData;
+       
         return (
             
            

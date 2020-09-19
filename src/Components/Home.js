@@ -4,7 +4,6 @@ import Amenities from './Amenities';
 import Photo from './Photo';
 import Applicant from './Applicant';
 import About from './About';
-import ContactForm from './ContactForm';
 import ContactInformation from './ContactInformation';
 
 function Home(props) {

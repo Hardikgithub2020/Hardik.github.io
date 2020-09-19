@@ -6,14 +6,17 @@ import FloorPlan from './FloorPlan';
 import Photo from './Photo';
 import Resident from './Resident';
 import Contact from './Contact';
-import Map from './Map';
+import MapContainer from './Map';
 import Home from './Home'
 import ApplicationForm from "./ApplicationForm";
+import Reservation from './Reservation';
+import EditReservation from  './EditReservation';
+import Explore from './Explore';
 
 
 // ===========================================
 
-// Made using BOOTSTRAP CLASS
+// Made using BOOTSTRAP CLASSNameclassName
 // ===========================================
 
 
@@ -23,9 +26,9 @@ function NewNavBar(props) {
   return (
     <div>
          <Router>
-      <nav class="navbar navbar-expand-lg navbar-light" style={{background :'#fcba03' }}>
+      <nav className="navbar navbar-expand-lg navbar-light" style={{background :'#fcba03' }}>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo01"
@@ -33,60 +36,68 @@ function NewNavBar(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
         <span id="office-phone" style={{background:"none",opacity:"0.2",marginTop:"30px"}}>
             <h1 style={{fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1>                         
             </span>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">
-                Home <span class="sr-only">(current)</span>
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">
+                Home <span className="sr-only">(current)</span>
                 </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Amenities">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Amenities">
               Amenities
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Applicant">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Applicant">
               Applicant
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/FloorPlan">
+            <li className="nav-item">
+              <Link className="nav-link" to="/FloorPlan">
               FloorPlan
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Map">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Map">
               Map
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Photo">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Photo">
               Photo
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Resident">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Resident">
                 Resident
                 </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/Contact">
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
               Contact us
               </Link>
             </li>
             <li>
-            <Link class="nav-link" to="/ApplicationForm">
+            <Link className="nav-link" to="/ApplicationForm">
               ApplicationForm
               </Link>
-            
             </li>
             <li>
+            <Link className="nav-link" to="/Reservation">
+              RESERVATION
+              </Link>
+            
+             </li>
+             <li>
+            <Link className="nav-link" to="/Explore">
+              Explore
+              </Link>
             
              </li>
             
@@ -107,7 +118,7 @@ function NewNavBar(props) {
     <FloorPlan />
   </Route>
   <Route path="/Map">
-    <Map />
+    <MapContainer />
   </Route>
   <Route path="/Photo">
     <Photo />
@@ -121,10 +132,19 @@ function NewNavBar(props) {
   <Route path="/ApplicationForm">
     <ApplicationForm />
   </Route>
+
+  <Route exact path="/Reservation">
+    <Reservation />
+  </Route>
+  <Route exact path = '/editReservation/:id' component={EditReservation} />
+  <Route path="/Explore">
+    <Explore />
+  </Route>
+  
+
   <Route exact path="/">
     <Home />
   </Route>
-
 </Switch>
 
 </Router>
