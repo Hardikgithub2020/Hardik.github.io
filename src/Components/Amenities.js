@@ -5,13 +5,13 @@ function Amenities(props) {
     return (
         <div className="aminities" >
            
-            <div class="container-fluid" style={{background:'white'}}>
+            <div className="container-fluid" style={{background:'white'}}>
             <h1 style={{fontFamily:'fantasy',margin:'5%'}}>AMENITIES</h1>
             
             <div className="aminities-Container" >
-            <div class="card-group">
-            <div class="card-body">
-            <div className="community-Aminities" class='container'>
+            <div className="card-group">
+            <div className="card-body">
+            <div className="community-Aminities container" >
                 <h3>COMMUNITY </h3>
                 <ul>
                     <li>Package Receiving</li>
@@ -33,8 +33,8 @@ function Amenities(props) {
                 </ul>
             </div>
             </div>
-            <div class="card-body">
-            <div className="apartment-Aminities" class='container'>
+            <div className="card-body">
+            <div className="apartment-Aminities container" >
                 <h3>APARTMENT </h3>
                 <ul>
                     <li>Refrigerator</li>
@@ -52,8 +52,8 @@ function Amenities(props) {
                 </ul>
             </div>
             </div>
-            <div class="card-body">
-            <div className="pet-Policy" class='container'>
+            <div className="card-body">
+            <div className="pet-Policy container">
                 <h3>PET POLICY</h3>
                 <ul className="pet-Policy-ul">
                     <li>Cats - 2 allowed, One time Fee $250.00, Rent $35.0</li>
