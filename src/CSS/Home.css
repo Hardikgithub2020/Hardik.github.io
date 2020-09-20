@@ -1,14 +1,59 @@
-.Home-Page{
-    background: url("https://ar.rdcpix.com/1708099119/b3098a698e8545c7e3fbfc041adae497c-f0xd-w1020_h770_q80.jpg");
+.welcome-tag{
+    background-image: url("../Image/LakeView.jpg");
     background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center;
     background-size: cover;
-    height: 91vh;
+    text-align: center;
+    height: 100vh;
     width: 100%;
     margin: 0;
-}
-.welcome-tag{
-    height: 80vh;
-    width: 100%;
-    text-align: center;
+    animation: myFrames2 100s step-end 0s infinite;
+    letter-spacing: 10px;
+    font-size: xx-large;
+    text-shadow: 3px 3px black;
+    color:aquamarine; 
 
+    
 }
+@keyframes myFrames2{
+    
+    10%{
+        background-image: url("../Image/PlayZone.jpg");
+         background-size: cover;
+     }
+     20%{
+        background-image: url("../Image/LivingRoom2.jpg");
+         background-size: cover;
+     }
+     30%{
+        background-image: url("../Image/ClubHouse2.jpg");
+         background-size: cover;
+     }
+     50%{
+        background-image: url("../Image/Bathroom.jpg");
+         background-size: cover;
+     }
+     60%{
+        background-image: url("../Image/FitnessCenter.jpg");
+         background-size: cover;
+     }
+     70%{
+        background-image: url("../Image/Kitchen.jpg");
+         background-size: cover;
+     }
+
+     80%{
+        background-image: url("../Image/ClubHouse.jpg");
+         background-size: cover;
+     }
+    
+    90%{
+        background-image: url("../Image/Laundry.jpg");
+        background-size: cover;
+    }
+    100%{
+        background-image: url("../Image/Bedroom.jpg");
+        background-size: cover;
+    }
+    }

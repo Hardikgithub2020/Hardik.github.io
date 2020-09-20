@@ -46,13 +46,12 @@ function NewNavBar(props) {
                         <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Amenities">AMENITIES</Link>
-                      </li>
-                      
-                      <li className="nav-item">
                         <Link className="nav-link" to="/FloorPlan">FLOOR_PLAN</Link>
                       </li>
-                      
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/Amenities">AMENITIES</Link>
+                      </li>
+                    
                       <li className="nav-item">
                         <Link className="nav-link" to="/Photo">PHOTO</Link>
                       </li>

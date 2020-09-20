@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Photo from './Photo';
 
 
 export default class EditReservation extends Component {
@@ -87,8 +88,8 @@ postAPI = async (formData) =>{
                     </div>
                     <div className="card-group" >
                         <div className='card-body'>
-                            <div style={{backgroundColor:"#ededed"}}>
-                                <div className="card-body">
+                            <div >
+                                <div className="">
                                     <div className="card-group">
                                         <div className="contactForm">   
                                             <form className="needs-validation" onSubmit={this.onSubmit} validate="true" >
@@ -139,11 +140,12 @@ postAPI = async (formData) =>{
                                                 <button className="btn btn-primary" type="submit">Submit form</button>
                                             </form>
                                         </div>
+                                        <div style={{width:"60%"}}><Photo/></div>
                                     </div>
                                 </div> 
                             </div>   
                         </div>
-                        <div>Reservation</div>
+                        
                        
                     </div>                   
                 </div>

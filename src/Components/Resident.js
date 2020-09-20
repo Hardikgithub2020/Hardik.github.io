@@ -6,7 +6,7 @@ import SignInForm from './SignInForm';
 class Resident extends Component {
   
     render() {
-        let message="RESTDENT PORTAL"
+        let message="RESIDENT PORTAL"
         let alertMessage="Successfully login"
         return (
 
