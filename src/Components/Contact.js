@@ -35,7 +35,7 @@ class Contact extends Component {
                             <div className="contactForm">
                                 {/* <h1>Welcome {userInfo.user_firstName}</h1> */}
                                 <h1>WELCOME</h1>
-                                <h3>How can we help you ?</h3>
+                                <h3>Fill out the form below to email us</h3>
                                 <form className="needs-validation" onSubmit={this.handleSubmit} validate="true" >
                                 <div className="form-row">
                                         <div className="col-md-6 mb-3">

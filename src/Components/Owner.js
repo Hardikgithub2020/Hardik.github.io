@@ -1,22 +1,51 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/userActions";
-import {useHistory } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
 
-class LogInForm extends Component {
-    constructor(props){
+
+class Owner extends Component {
+    constructor(props) {
         super(props);
         this.state={
             user_email : '',
             user_password :'',
-           
+            error: false,
+            login: false
         };
+        this.onSubmit = this.onSubmit.bind(this);
+        this.handleChange=this.handleChange.bind(this);
+        
     }
+
     
-    onSubmit=(event)=>{
-            this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
+    onSubmit= (event) =>{
+       
+       
+       const{save_email,save_password}=this.props.loginData;
+        const { user_email, user_password } = this.state;
+        this.setState({ error: false });
+        if (!(user_email === save_email && user_password === save_password)) {
+           this.setState({ error: true,login:false });
+           alert("login failed")
+           this.props.dispatch({
+            type: actions.GET_LOGIN_SUCCESS,
+            payload: this.state,
+        });
+        }else{
+            alert("login successful")
+            this.setState({ error: false,login:true });
+            this.props.history.push('/Reservation');
+            
         }
+        event.preventDefault();
+      }
+
+    handleChange(e, { name, value }) {
+        this.setState({ [name]: value });
+      }
+   
         
     render() {
         
@@ -41,4 +70,4 @@ const mapStateToProps = (state) => {
     return state;
     };
 
-export default connect(mapStateToProps)(LogInForm);
+export default withRouter(connect(mapStateToProps)(Owner));

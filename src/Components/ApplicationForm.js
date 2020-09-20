@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import * as actions from "../actions/userActions";
 import axios from 'axios';
 import ContactInformation from "./ContactInformation";
+import { withRouter } from 'react-router-dom';
 
 
 class ApplicationForm extends Component {
@@ -52,6 +53,7 @@ class ApplicationForm extends Component {
 
         };
         this.postAPI(formData);
+        this.props.history.push('/Reservation');
     }
     postAPI = async (formData) =>{
         console.log(formData)
@@ -147,4 +149,4 @@ class ApplicationForm extends Component {
 }
 
 
-export default ApplicationForm;
+export default withRouter(ApplicationForm);

@@ -12,6 +12,7 @@ import ApplicationForm from "./ApplicationForm";
 import Reservation from './Reservation';
 import EditReservation from  './EditReservation';
 import Explore from './Explore';
+import Owner from './Owner'
 
 
 // ===========================================
@@ -61,17 +62,22 @@ function NewNavBar(props) {
                       <li className="nav-item">
                         <Link className="nav-link" to="/Resident">RESIDENT</Link>
                       </li>
+                      
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Contact">CONTACT</Link>
+                        <Link className="nav-link" to="/OWNER">MANAGEMENT</Link>
                       </li>
+{/* 
                       <li>
                         <Link className="nav-link" to="/Reservation">RESERVATION</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link className="nav-link" to="/Explore">EXPLORE</Link>
                       </li>
                       <li className="nav-item">
                         <Link className="nav-link" to="/Map">MAP</Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/Contact">CONTACT</Link>
                       </li>
                   </ul>
               </div>
@@ -100,8 +106,9 @@ function NewNavBar(props) {
                 <Contact />
               </Route>
               {/* Application from has no link and get access through Application once user login */}
-              <Route path="/ApplicationForm" component={ApplicationForm}>
-                
+              <Route path="/ApplicationForm" component={ApplicationForm}/>
+               <Route path="/Owner">
+                 <Owner/>
               </Route>
               <Route exact path="/Reservation">
                 <Reservation />
