@@ -47,34 +47,34 @@ function NewNavBar(props) {
                         <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Amenities">Amenities</Link>
+                        <Link className="nav-link" to="/Amenities">AMENITIES</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Applicant">Applicant</Link>
+                        <Link className="nav-link" to="/Applicant">APPLICATION</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/FloorPlan">FloorPlan</Link>
+                        <Link className="nav-link" to="/FloorPlan">FLOOR_PLAN</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Map">Map</Link>
+                        <Link className="nav-link" to="/Map">MAP</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Photo">Photo</Link>
+                        <Link className="nav-link" to="/Photo">PHOTO</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Resident">Resident</Link>
+                        <Link className="nav-link" to="/Resident">RESIDENT</Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/Contact">Contact us</Link>
+                        <Link className="nav-link" to="/Contact">CONTACT</Link>
                       </li>
                       <li>
-                        <Link className="nav-link" to="/ApplicationForm">ApplicationForm</Link>
+                        <Link className="nav-link" to="/ApplicationForm">APPLICATION_FORM</Link>
                       </li>
                       <li>
                         <Link className="nav-link" to="/Reservation">RESERVATION</Link>
                       </li>
                       <li>
-                        <Link className="nav-link" to="/Explore">Explore</Link>
+                        <Link className="nav-link" to="/Explore">EXPLORE</Link>
                       </li>
                   </ul>
               </div>
