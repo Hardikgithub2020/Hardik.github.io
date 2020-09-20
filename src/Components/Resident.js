@@ -11,11 +11,7 @@ class Resident extends Component {
         return (
 
                 <div className="card">
-                    <div className="card-group">
-                        <h3>
-                            Welcome to Resident Services
-                        </h3>
-                    </div>
+                    
                 <div className="card-group" >
                     <div className='card-body'>
                         <div style={{backgroundColor:"#e4f0ee"}}>
