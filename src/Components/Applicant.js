@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../CSS/Applicant.css";
+import {connect} from 'react-redux';
 // Require to import withRouter to use History for redirect page
 import { withRouter } from 'react-router-dom';
 
@@ -10,8 +11,6 @@ class Applicant extends Component {
         this.state={
             user_email : '',
             user_password :'',
-            save_email:'Hardik@mail',
-            save_password:"1234",
             error: false,
             login: false
         };
@@ -23,17 +22,21 @@ class Applicant extends Component {
     
     onSubmit= (event) =>{
        
-        const { user_email, user_password ,save_email,save_password} = this.state;
+       
+       const{save_email,save_password}=this.props.loginData;
+        const { user_email, user_password } = this.state;
         this.setState({ error: false });
         if (!(user_email === save_email && user_password === save_password)) {
            this.setState({ error: true,login:false });
            alert("login failed")
+           dispatch();
         }else{
             alert("login successful")
             this.setState({ error: false,login:true });
             this.props.history.push('/ApplicationForm');
             
         }
+        event.preventDefault();
       }
 
     handleChange(e, { name, value }) {
@@ -91,7 +94,10 @@ class Applicant extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return state;
+};
 
-export default withRouter(Applicant);
+export default withRouter(connect(mapStateToProps)(Applicant));
 
 

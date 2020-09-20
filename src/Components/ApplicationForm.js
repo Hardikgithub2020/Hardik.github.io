@@ -26,15 +26,9 @@ class ApplicationForm extends Component {
     
     handleSubmit= (event) =>{
        
-        
         alert("Your application is submitted successfully, our representative contact you within two days");
         this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-        // event.preventdefault();
-       //store.set('loggedIn', true);
-         //alert(this.props.alertMessage);
-        //  this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-        // event.preventDefault();
-        // console.log(this.props); 
+       
       }
     
     handleChange= (event) => {

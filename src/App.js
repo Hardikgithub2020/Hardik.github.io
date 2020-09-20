@@ -7,7 +7,6 @@ import NewNavBar from './Components/NewNavBar';
 function App({userData}) {
   return (
             <div className="App">
-              <h1>{userData.user_firstName}</h1>
               <NewNavBar/>
             </div>
           );
