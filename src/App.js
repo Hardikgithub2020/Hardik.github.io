@@ -1,22 +1,16 @@
 import React from 'react';
 import './App.css';
-// import Navbar from './Components/Navbar';
 import { connect } from 'react-redux';
 import NewNavBar from './Components/NewNavBar';
 
 
 function App({userData}) {
-  
   return (
-    
-    <div className="App">
-    
-      <h1>{userData.user_firstName}</h1>
-      <NewNavBar/>
-      {/* <Navbar/> */}
-
-    </div>
-  );
+            <div className="App">
+              <h1>{userData.user_firstName}</h1>
+              <NewNavBar/>
+            </div>
+          );
 }
 const mapStateToProps=state=>state
 
