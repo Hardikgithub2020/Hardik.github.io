@@ -32,15 +32,15 @@ export default class Explore extends Component {
       let displayDataForRestaurants = this.state.restaurants.map((res,i) =>{
             return (
                         <div className="collections card text-white text-left bg-info mb-3" style={{maxWidth: "18rem",margin:"3px"}}  key={i}>
-                            <h4 className="card-header" >{res.restaurant.name}</h4>
+                            <h4 className="card-header" >{res.restaurant.name.toUpperCase()}</h4>
                             <div className="card-body">
-                              <p className="card-text">Services:{res.restaurant.highlights.toString()}</p>  
-                              <p className="card-text">Street:{res.restaurant.location.address}</p> 
-                              <p className="card-text">Phone Number:{res.restaurant.phone_numbers}</p>
-                              <p className="card-text">Locality:{res.restaurant.location.locality}</p>
+                              <p className="card-text">Services : {res.restaurant.highlights.toString()}</p>  
+                              <p className="card-text">Street : {res.restaurant.location.address}</p> 
+                              <p className="card-text">Phone Number : {res.restaurant.phone_numbers}</p>
+                              <p className="card-text">Locality : {res.restaurant.location.locality}</p>
                             </div> 
                             <div className="card-footer">
-                              <p className="card-text">Cuisines:{res.restaurant.cuisines}</p>
+                              <p className="card-text">Cuisines : {res.restaurant.cuisines}</p>
                             </div>
                         </div>
                   );
@@ -48,7 +48,7 @@ export default class Explore extends Component {
     
     return (
               <div >
-                <h1 id="explore-header">Explore nearby restaurants</h1>
+                <h1 id="explore-header">Explore Nearby Restaurants</h1>
                 <div className="explore row ">
                   {displayDataForRestaurants}
                 </div>  
