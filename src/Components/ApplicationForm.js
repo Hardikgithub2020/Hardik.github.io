@@ -135,8 +135,8 @@ class ApplicationForm extends Component {
                                                 <button className="btn btn-primary" type="submit">Submit form</button>
                                             </form>
                                         </div>
-                                        <div>
-                                            <h1>WELCOME</h1>
+                                        <div className="card-body" style={{margin:"0"}}>
+                                            <h1 style={{backgroundColor:"#ededed"}}>WELCOME</h1>
                                             <ContactInformation/>
                                             </div>
                                     </div>
