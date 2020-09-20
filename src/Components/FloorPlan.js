@@ -4,11 +4,11 @@ import { connect } from "react-redux";
 
 function FloorPlan(props) {
   return (
-    <div className="FloorPlan">
-      <div className="card-group">
-       <div className="card-deck">
-        <div className="card">
-          <img
+    <div className="FloorPlan" >
+      <div >
+       <div className="row" >
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
+         <img
             src={require("../Image/FloorPlan_Dogwood.jpeg")}
             className="card-img-top"
             alt="Floorplan_Dogwood"
@@ -21,7 +21,7 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
           <img
             src={require("../Image/Floorplan_Magnolia_1B1B.jpeg")}
             className="card-img-top"
@@ -35,7 +35,7 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
           <img
             src={require("../Image/FloorPlan_SugarMaple_2B1Bath.jpeg")}
             className="card-img-top"
@@ -49,9 +49,8 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
-        </div>
-        <div className="card-deck">
-        <div className="card">
+       
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
           <img
             src={require("../Image/FloorPlan_sassafras_2B2B.jpeg")}
             className="card-img-top"
@@ -65,11 +64,12 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
           <img
             src={require("../Image/FloorPlan_Sycamore_2b2Bath2floor.jpeg")}
             className="card-img-top"
             alt="FloorPlan_Sycamore"
+            style={{height:"75%"}}
           />
           <div className="card-body">
             <h5 className="card-title">SYCAMORE</h5>
@@ -79,11 +79,12 @@ function FloorPlan(props) {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card text-white text-left bg-info mb-3" style={{maxWidth: "25rem",margin:"10px"}}>
           <img
             src={require("../Image/FloorPlan_Cypress_3b2Bath.jpeg")}
             className="card-img-top"
             alt="FloorPlan_Cypress"
+            style={{height:"75%"}}
           />
           <div className="card-body">
             <h5 className="card-title">CYPRESS</h5>
