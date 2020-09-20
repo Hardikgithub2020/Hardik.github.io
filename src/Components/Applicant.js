@@ -3,6 +3,7 @@ import "../CSS/Applicant.css";
 import {connect} from 'react-redux';
 // Require to import withRouter to use History for redirect page
 import { withRouter } from 'react-router-dom';
+import *as actions from '../actions/userActions'
 
 
 class Applicant extends Component {
@@ -29,7 +30,10 @@ class Applicant extends Component {
         if (!(user_email === save_email && user_password === save_password)) {
            this.setState({ error: true,login:false });
            alert("login failed")
-           dispatch();
+           this.props.dispatch({
+            type: actions.GET_LOGIN_SUCCESS,
+            payload: this.state,
+        });
         }else{
             alert("login successful")
             this.setState({ error: false,login:true });
