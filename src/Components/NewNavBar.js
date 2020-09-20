@@ -85,7 +85,7 @@ function NewNavBar(props) {
                 <Amenities />
               </Route>
               <Route exact path="/Applicant">
-                <Applicant  pathHistory={history}/>
+                <Applicant  />
               </Route>
               <Route path="/FloorPlan">
                 <FloorPlan />

@@ -15,6 +15,7 @@ class SignInForm extends Component {
     handleSubmit=(event)=>{
         alert(this.props.alertMessage);
         this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
+        this.props.history.push('');
         
     }
     render() {
