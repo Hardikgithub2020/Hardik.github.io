@@ -10,7 +10,7 @@ class Resident extends Component {
         let alertMessage="Successfully login"
         return (
 
-                <div className="card">
+                <div className="card" style={{margin:"10%"}}>
                     
                 <div className="card-group" >
                     <div className='card-body'>

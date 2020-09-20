@@ -4,6 +4,7 @@ function ContactInformation(props) {
     return (
        
             <section className="contactInfo" >
+                
                 <div id="office-phone">
                     <h1>Call Us</h1>
                     <h2 className="normal" id="phone-number">
@@ -28,7 +29,7 @@ function ContactInformation(props) {
                     <dd>10AM-4PM</dd>
                 </dl> 
                 <hr/>
-                <h1 style={{fontFamily:'fantasy',margin:'5%', color:"grey", marginTop:"25%"}}>RESERVATION</h1>         
+                <h1 style={{fontFamily:'fantasy',margin:'5%', color:"grey", marginTop:"50%"}}>RESERVATION</h1>         
             </section>                           
       
     );

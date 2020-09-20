@@ -1,7 +1,9 @@
 
 import React, { Component } from "react";
 import * as actions from "../actions/userActions";
-import axios from 'axios'
+import axios from 'axios';
+import ContactInformation from "./ContactInformation";
+
 
 class ApplicationForm extends Component {
     constructor(props) {
@@ -74,7 +76,7 @@ class ApplicationForm extends Component {
     render(){ 
         return (
             <div className="ApplicationForm">
-               <div className="card">
+               <div className="card" style={{marginLeft:"15%", marginRight:"15%"}}>
                     <div className="card-group" >
                         <h3 style={{fontFamily:"fantasy"}}>Application Form</h3>
                     </div>
@@ -133,11 +135,15 @@ class ApplicationForm extends Component {
                                                 <button className="btn btn-primary" type="submit">Submit form</button>
                                             </form>
                                         </div>
+                                        <div>
+                                            <h1>WELCOME</h1>
+                                            <ContactInformation/>
+                                            </div>
                                     </div>
                                 </div> 
                             </div>   
                         </div>
-                        <div>Reservation</div>
+                        
                        
                     </div>                   
                 </div>

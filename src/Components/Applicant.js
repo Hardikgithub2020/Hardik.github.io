@@ -66,7 +66,7 @@ handleSubmit= (event) =>{
         return (
             <div className="Applicant">
 
-                <div className="card">
+                <div className="card "style={{margin:"10%"}}>
                     <div className="card-group" >
                         <h3 style={{fontFamily:"fantasy"}}>LOG - IN</h3>
                     </div>
