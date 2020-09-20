@@ -24,23 +24,23 @@ class Resident extends Component {
                     </div>
                     <div className='card-body'>
                         <div className='card-body'>
-                            <div class="media" id="rentPaymentsWrap">
-                                <div class="pull-left">
+                            <div className="media" id="rentPaymentsWrap">
+                                <div className="pull-left">
                                     <img src="https://cdngeneral.rentcafe.com/images/money.png" alt=""/>
                                 </div>
-                                <div class="media-body">
-                                    <h2 class="media-heading"> Make Payments </h2>
+                                <div className="media-body">
+                                    <h2 className="media-heading"> Make Payments </h2>
                                     <p>Pay online, check the status of your payments and review your payment history.</p>
                                 </div>
                             </div>
                         </div>
                         <div className='card-body'>
-                            <div class="media" id="maintReqWrap">
-                                <div class="pull-left">
+                            <div className="media" id="maintReqWrap">
+                                <div className="pull-left">
                                     <img src="https://cdngeneral.rentcafe.com/images/resources.png" alt=""/>
                                 </div>
-                                <div class="media-body">
-                                    <h2 class="media-heading">Maintenance Requests</h2>
+                                <div className="media-body">
+                                    <h2 className="media-heading">Maintenance Requests</h2>
                                     <p>Submit online maintenance requests.</p>
                                 </div>
                             </div>

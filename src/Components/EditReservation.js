@@ -92,46 +92,46 @@ postAPI = async (formData) =>{
                                             <form className="needs-validation" onSubmit={this.onSubmit}validate >
                                                 <div className="form-row">
                                                     <div className="col-md-6 mb-3">
-                                                        <label for="firstName">First name</label>
+                                                        <label htmlFor="firstName">First name</label>
                                                         <input name="firstName" type="text" className="form-control" id="firstName" value={this.state.firstName} onChange={this.handleChange} required />
                                                         <div className="invalid-tooltip">Please provide your First number</div>
                                                     </div>
                                                     <div className="col-md-6 mb-3">
-                                                        <label for="lastName">Last name</label>
+                                                        <label htmlFor="lastName">Last name</label>
                                                         <input name="lastName" type="text" className="form-control" id="lastName" value={this.state.lastName} onChange={this.handleChange} required/>
                                                         <div className="invalid-tooltip">Please provide your last number</div>
                                                     </div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="email">Email address</label>
+                                                    <label htmlFor="email">Email address</label>
                                                     <input name="email" type="email" className="form-control" id="email" placeholder="name@example.com" value={this.state.email} onChange={this.handleChange} required/>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="phone">Phone</label>
+                                                    <label htmlFor="phone">Phone</label>
                                                     <input name="phone" type="text" className="form-control" id="phone"  placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={this.handleChange} required/>
                                                     <div className="invalid-tooltip">Please provide a valid number.</div>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="apartmentType">Apartment Type</label>
+                                                    <label htmlFor="apartmentType">Apartment Type</label>
                                                     <input list="apartmentType"name="apartmentType" type="text" className="form-control" id="apartmentType" value={this.state.apartmentType} onChange={this.handleChange} required/>
                                                     <datalist id="apartmentType">
                                                         <option value="DOGWOOD"/><option value="MAGNOLIA"/><option value="SUGAR MAPLE"/><option value="SASSFRAS"/><option value="CYPRESS"/><option value="SYCAMORE"/>
                                                     </datalist>
                                                </div>
                                                 <div className="form-group">
-                                                    <label for="startingDate">Starting Date</label>
+                                                    <label htmlFor="startingDate">Starting Date</label>
                                                     <input name="startingDate" type="date" className="form-control" id="startingDate" value={this.state.startingDate} onChange={this.handleChange} required/>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="leaseDuration">Lease Duration</label>
+                                                    <label htmlFor="leaseDuration">Lease Duration</label>
                                                     <input name="leaseDuration" type="Number" className="form-control" id="leaseDuration" value={this.state.leaseDuration} onChange={this.handleChange} required/>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="numberOfResident">Number of Resident</label>
+                                                    <label htmlFor="numberOfResident">Number of Resident</label>
                                                     <input name="numberOfResident" type="number" className="form-control" id="numberOfResident" value={this.state.numberOfResident} onChange={this.handleChange} required/>
                                                 </div>
                                                 <div className="form-group">
-                                                    <label for="occupation">Occupation</label>
+                                                    <label htmlFor="occupation">Occupation</label>
                                                     <input name="occupation" type="text" className="form-control" id="occupation" value={this.state.occupation} onChange={this.handleChange} required/>
                                                 </div>
                                                 

@@ -13,7 +13,6 @@ export default class Reservation extends Component {
   async componentDidMount() {
     try{
             const response = await axios.get("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications");
-            console.log(response.data);
             this.setState({reserve: response.data, isLoading: false})
         }
     catch(e){

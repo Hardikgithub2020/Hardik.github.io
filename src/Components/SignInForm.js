@@ -21,25 +21,25 @@ class SignInForm extends Component {
         
         return (
             <div className="SignInForm">
-                <div class="card-body">
+                <div className="card-body">
                     <form onSubmit={this.handleSubmit}>
-                        <div class="form-group">
+                        <div className="form-group">
                         <h3>{this.props.message}</h3>
                         </div>
-                        <div class="form-group">
-                            <label for="InputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <div className="form-group">
+                            <label htmlFor="InputEmail1">Email address</label>
+                            <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
+                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
+                        <div className="form-group">
+                            <label htmlFor="exampleInputPassword1">Password</label>
+                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="***********"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <div className="form-group form-check">
+                            <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-primary">Submit</button>
                      </form> 
                 </div>
              </div>
