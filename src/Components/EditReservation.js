@@ -17,11 +17,12 @@ export default class EditReservation extends Component {
         occupation:""      
     }
   }
+
   async componentDidMount() {
-      console.log(this.state.id)
+    
     try{
-            const response = await axios.get("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+this.state.id)
-            console.log(response.data);
+            const response = await axios.get("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+this.state.id);
+    
             this.setState({
                 firstName : response.data.firstName,
                 lastName : response.data.lastName,
@@ -32,18 +33,20 @@ export default class EditReservation extends Component {
                 leaseDuration : response.data.leaseDuration,
                 occupation : response.data.occupation,
                 numberOfResident : response.data.numberOfResident,
-            })
+            });
         }
     catch(e){
-            console.log("Error", e)
+            console.log("Error :", e)
         }
-    }
-  handleChange = (event) =>{
+ }
+
+handleChange = (event) =>{
     event.preventDefault();
     this.setState({
       [event.target.name]:event.target.value
     });
 }
+
 onSubmit=(event) =>{
     alert("Your changes are saved");
     event.preventDefault();
@@ -61,17 +64,13 @@ onSubmit=(event) =>{
     this.postAPI(formData);
 }
 postAPI = async (formData) =>{
-    console.log(formData)
     try{
-            const response = await axios.put("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+window.location.pathname.split("/")[2], formData
-            );
-            console.log(response.data);
-            console.log(window.location.pathname);
+            await axios.put("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+window.location.pathname.split("/")[2], formData);
             this.props.history.push('/Reservation');
             
         }
     catch(e){
-            console.log("Error", e)
+            console.log("Error :", e)
         }
     }
    render(){
@@ -89,7 +88,7 @@ postAPI = async (formData) =>{
                                 <div className="card-body">
                                     <div className="card-group">
                                         <div className="contactForm">   
-                                            <form className="needs-validation" onSubmit={this.onSubmit}validate >
+                                            <form className="needs-validation" onSubmit={this.onSubmit} validate="true" >
                                                 <div className="form-row">
                                                     <div className="col-md-6 mb-3">
                                                         <label htmlFor="firstName">First name</label>
@@ -134,7 +133,6 @@ postAPI = async (formData) =>{
                                                     <label htmlFor="occupation">Occupation</label>
                                                     <input name="occupation" type="text" className="form-control" id="occupation" value={this.state.occupation} onChange={this.handleChange} required/>
                                                 </div>
-                                                
                                                 <button className="btn btn-primary" type="submit">Submit form</button>
                                             </form>
                                         </div>
