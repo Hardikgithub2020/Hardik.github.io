@@ -68,9 +68,6 @@ function NewNavBar(props) {
                         <Link className="nav-link" to="/Contact">CONTACT</Link>
                       </li>
                       <li>
-                        <Link className="nav-link" to="/ApplicationForm">APPLICATION_FORM</Link>
-                      </li>
-                      <li>
                         <Link className="nav-link" to="/Reservation">RESERVATION</Link>
                       </li>
                       <li>
