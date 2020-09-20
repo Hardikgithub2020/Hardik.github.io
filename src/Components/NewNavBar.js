@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Link, Route, useHistory} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
 import Amenities from './Amenities';
 import Applicant from './Applicant';
 import FloorPlan from './FloorPlan';
@@ -21,8 +21,7 @@ import Explore from './Explore';
 
 
 function NewNavBar(props) {
-  const history = useHistory();
-  console.log(history);
+  
   return (
     <div>
          <Router>
@@ -49,17 +48,16 @@ function NewNavBar(props) {
                       <li className="nav-item">
                         <Link className="nav-link" to="/Amenities">AMENITIES</Link>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/Applicant">APPLICATION</Link>
-                      </li>
+                      
                       <li className="nav-item">
                         <Link className="nav-link" to="/FloorPlan">FLOOR_PLAN</Link>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/Map">MAP</Link>
-                      </li>
+                      
                       <li className="nav-item">
                         <Link className="nav-link" to="/Photo">PHOTO</Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/Applicant">APPLICATION</Link>
                       </li>
                       <li className="nav-item">
                         <Link className="nav-link" to="/Resident">RESIDENT</Link>
@@ -72,6 +70,9 @@ function NewNavBar(props) {
                       </li>
                       <li>
                         <Link className="nav-link" to="/Explore">EXPLORE</Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/Map">MAP</Link>
                       </li>
                   </ul>
               </div>
@@ -99,13 +100,14 @@ function NewNavBar(props) {
               <Route path="/Contact">
                 <Contact />
               </Route>
-              <Route path="/ApplicationForm">
-                <ApplicationForm />
+              {/* Application from has no link and get access through Application once user login */}
+              <Route path="/ApplicationForm" component={ApplicationForm}>
+                
               </Route>
               <Route exact path="/Reservation">
                 <Reservation />
               </Route>
-              {/* Edit reservation has nos et link and get access through edit button */}
+              {/* Edit reservation has not link and get access through edit button in reservation list */}
               <Route exact path = '/editReservation/:id' component={EditReservation} />
               <Route path="/Explore">
                 <Explore />
