@@ -86,9 +86,7 @@ handleSubmit= (event) =>{
                                         </div>
                                         
                                         <button type="submit" className="btn btn-primary">Submit</button>
-                                        <Link to="/Applicants/ApplicationForm" onClick={this.handleSubmit}>
-                                            submit2
-                                        </Link>
+                                       
                                     </form> 
                                 </div> 
                             </div>   

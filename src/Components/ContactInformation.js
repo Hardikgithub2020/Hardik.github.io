@@ -29,7 +29,7 @@ function ContactInformation(props) {
                     <dd>10AM-4PM</dd>
                 </dl> 
                 <hr/>
-                <h1 style={{fontFamily:'fantasy', color:"grey", marginTop:"50%"}}>RESERVATION</h1>         
+                <h1 style={{fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1>         
             </section>                           
       
     );

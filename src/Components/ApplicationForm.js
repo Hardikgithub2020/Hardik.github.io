@@ -85,7 +85,7 @@ class ApplicationForm extends Component {
                             <div style={{backgroundColor:"#ededed"}}>
                                 <div className="card-body">
                                     <div className="card-group">
-                                        <div className="contactForm">   
+                                        <div className="contactForm ">   
                                             <form className="needs-validation" onSubmit={this.onSubmit} validate="true" >
                                                 <div className="form-row">
                                                     <div className="col-md-6 mb-3">
@@ -135,11 +135,11 @@ class ApplicationForm extends Component {
                                                 <button className="btn btn-primary" type="submit">Submit form</button>
                                             </form>
                                         </div>
-                                        <div className="card-body" style={{margin:"0"}}>
-                                            <h1 style={{backgroundColor:"#ededed"}}>WELCOME</h1>
-                                            <ContactInformation/>
-                                            </div>
+                                        <ContactInformation/>
+                                        
+                                        
                                     </div>
+                                   
                                 </div> 
                             </div>   
                         </div>
