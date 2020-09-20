@@ -4,7 +4,8 @@ export default class EditReservation extends Component {
   constructor(props) {
     super(props);
     this.state ={
-        id: window.location.pathname.split("/")[2],
+        id: window.location.pathname.split("/")[2],//other way to collec t string last value --->window.location.pathname.slice(-1)
+        
         reserve: [],
         firstName:"",
         lastName:"",
@@ -20,7 +21,7 @@ export default class EditReservation extends Component {
 
   async componentDidMount() {
     
-    try{
+    try{    
             const response = await axios.get("https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/"+this.state.id);
     
             this.setState({
