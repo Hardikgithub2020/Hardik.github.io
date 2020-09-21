@@ -17,8 +17,14 @@ function Home(props) {
             <FloorPlan/>
             <Amenities/>
             <Photo/>
+            <div className="row">
+            <div className="card">
             <Applicant/> 
-            <ContactInformation/>  
+            </div>
+            <div className="card-body">
+            <ContactInformation/>
+            </div>
+            </div>  
         </div>
     );
 }

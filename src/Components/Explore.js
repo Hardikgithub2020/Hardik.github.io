@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import '../CSS/Explore.css'
-//const ZOMATO_API_KEY = process.env.ZOMATO_API_KEY ;
+require('dotenv').config();
+
 
 
 export default class Explore extends Component {
@@ -16,7 +17,7 @@ export default class Explore extends Component {
 
   sendGetRestaurant = async () => {
       try {     // Here we pass a api key in header objrct
-              const resp = await axios.get('https://developers.zomato.com/api/v2.1/search?lat=39.103119&lon=-84.512016',{headers: {"user-key":" a725a13c0e61675a1eb07e3df050cd20"} });
+              const resp = await axios.get('https://developers.zomato.com/api/v2.1/search?lat=39.103119&lon=-84.512016',{headers: {"user-key":"a725a13c0e61675a1eb07e3df050cd20"} });
                     this.setState({restaurants: resp.data.restaurants});
           
           }catch (err) {

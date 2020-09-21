@@ -73,7 +73,7 @@ class Applicant extends Component {
                                             <input type="password" className="form-control" id="exampleInputPassword1" placeholder="***********"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
                                         </div>
                                         
-                                        <button type="submit" className="btn btn-primary">Submit</button>
+                                        <button type="submit" className="btn btn-primary">Log In</button>
                                        
                                     </form> 
                                 </div> 

@@ -39,30 +39,30 @@ class Contact extends Component {
                                 <form className="needs-validation" onSubmit={this.handleSubmit} validate="true" >
                                 <div className="form-row">
                                         <div className="col-md-6 mb-3">
-                                            <label htmlFor="validationTooltip01">First name</label>
-                                                <input name="firstName" type="text" className="form-control" id="validationTooltip01" value={this.state.user_firstName}
+                                            <label htmlFor="firstName">First name</label>
+                                                <input name="firstName" type="text" className="form-control" id="firstName" value={this.state.user_firstName}
                                                         onChange={(e) => this.setState({ user_firstName: e.target.value })} required />
                                                     <div className="invalid-tooltip">Please provide your First number</div>
                                                 </div>
                                                 <div className="col-md-6 mb-3">
-                                                    <label htmlFor="validationTooltip02">Last name</label>
-                                                    <input name="lastName" type="text" className="form-control" id="validationTooltip02" value={this.state.user_lastName} onChange={(e) =>this.setState({ user_lastName: e.target.value })} required/>
+                                                    <label htmlFor="lastName">Last name</label>
+                                                    <input name="lastName" type="text" className="form-control" id="lastName" value={this.state.user_lastName} onChange={(e) =>this.setState({ user_lastName: e.target.value })} required/>
                                                     <div className="invalid-tooltip">Please provide your last number</div>
                                                 </div>
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="exampleFormControlInput1">Email address</label>
-                                                <input name="email" type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={this.state.user_email} onChange={(e) => this.setState({ user_email: e.target.value })}/>
+                                                <label htmlFor="email">Email address</label>
+                                                <input name="email" type="email" className="form-control" id="email" placeholder="name@example.com" value={this.state.user_email} onChange={(e) => this.setState({ user_email: e.target.value })}/>
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="validationTooltip10">Phone</label>
-                                                <input type="tel" className="form-control" id="validationTooltip10"  placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={this.state.user_phoneNumber} onChange={(e) =>this.setState({ user_phoneNumber: e.target.value })} required />
+                                                <label htmlFor="phoneNumber">Phone</label>
+                                                <input name="phoneNumber"type="tel" className="form-control" id="phoneNumber"  placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={this.state.user_phoneNumber} onChange={(e) =>this.setState({ user_phoneNumber: e.target.value })} required />
                                                 
                                                 <div className="invalid-tooltip">Please provide a valid number.</div>
                                             </div>
                                             <div className="form-group">
-                                                <label htmlFor="exampleFormControlTextarea1">Message</label>
-                                                <textarea name="message" className="form-control"id="exampleFormControlTextarea1"rows="3"
+                                                <label htmlFor="message">Message</label>
+                                                <textarea name="message" className="form-control"id="message"rows="3"
                                                     value={this.state.user_message} onChange={(e) =>this.setState({ user_message: e.target.value })}></textarea>
                                             </div>
                                             <button className="btn btn-primary" type="submit">Submit form</button>
@@ -80,9 +80,9 @@ class Contact extends Component {
                                         <a href="tel: (000)-000-0000" className="click_to_call_href sclick_to_call_href_contactus"><span className="click_to_call">(000)-000-0000</span></a>               
                                     </h2>    
                                 </div>                                    
-                                <dl className="dl-horizontal" id="office_hours">
-                                    <dt className="office_hours_today">Monday</dt>
-                                    <dd className="ole_hours_today">9AM-5PM</dd>
+                                <dl className="dl-horizontal" >
+                                    <dt>Monday</dt>
+                                    <dd>9AM-5PM</dd>
                                     <dt>Tuesday</dt>
                                     <dd>9AM-5PM</dd>
                                     <dt>Wednesday</dt>

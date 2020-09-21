@@ -22,7 +22,6 @@ export default class Reservation extends Component {
     }
 
     async remove(id) {
-        console.log(id);
         try{
                 const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/${id}`);
                 console.log(response.data);
