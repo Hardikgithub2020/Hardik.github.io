@@ -1,13 +1,51 @@
 import React, { Component } from 'react';
-//import '../CSS/Resident.css'
-import SignInForm from './SignInForm';
+import * as actions from '../actions/userActions';
+import {connect} from 'react-redux';
+
+
+
 
 
 class Resident extends Component {
-  
+    constructor(props) {
+        super(props);
+        this.state={
+            user_email : '',
+            user_password :'',
+            error: false,
+            login: false
+        };
+        this.onSubmit = this.onSubmit.bind(this);  
+    }
+
+    
+    onSubmit= (event) =>{
+      
+        const{save_email,save_password} = this.props.loginData;
+        const { user_email, user_password } = this.state;
+        this.setState({ error: false });
+        if (!(user_email === save_email && user_password === save_password)) {
+           this.setState({ error: true,login:false });
+           alert("login failed")
+           this.props.dispatch({
+            type: actions.GET_LOGIN_FAILURE,
+            
+        });
+        }else{
+            alert("login successful")
+            this.setState({ error: false,login:true });
+            this.props.dispatch({
+                type: actions.GET_LOGIN_SUCCESS,
+                payload: this.state,
+            });
+            
+        }
+        event.preventDefault();
+      }
+
+    
     render() {
-        let message="RESIDENT PORTAL"
-        let alertMessage="Successfully login"
+       
         return (
 
                 <div className="card" style={{margin:"10%"}}>
@@ -15,7 +53,25 @@ class Resident extends Component {
                 <div className="card-group" >
                     <div className='card-body'>
                         <div style={{backgroundColor:"#e4f0ee"}}>
-                        <SignInForm message={message} alertMessage={alertMessage}/> 
+                            <div className="SignInForm">
+                                <div className="card-body">
+                                    <form onSubmit={this.onSubmit}>
+                                        <div className="form-group text-left">
+                                            <label htmlFor="email">Email address</label>
+                                            <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="applicant@mail" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
+                                            
+                                        </div>
+                                        <div className="form-group text-left">
+                                            <label htmlFor="password">Password</label>
+                                            <input type="password" className="form-control" id="password" placeholder="1234" value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
+                                        </div>
+                                        <div className="text-right">
+                                        
+                                        <button type="submit" className="btn btn-primary">Log In</button>
+                                        </div>
+                                    </form> 
+                                </div>
+                             </div>
                         </div>   
                     </div>
                     <div className='card-body'>
@@ -47,4 +103,8 @@ class Resident extends Component {
         );
     }
 }
-export default Resident;
+const mapStateToProps = (state) => {
+    return state;
+};
+
+export default connect(mapStateToProps)(Resident);

@@ -24,7 +24,7 @@ export default class Reservation extends Component {
     async remove(id) {
         try{
                 const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://secure-escarpment-96068.herokuapp.com/application_api/v1/applications/${id}`);
-                console.log(response.data);
+                console.log(response)
                 let update = this.state.reserve.filter(i => i.id !== id);
                 this.setState({reserve: update})
             }

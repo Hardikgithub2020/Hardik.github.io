@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "../CSS/Applicant.css";
 import {connect} from 'react-redux';
 // Require to import withRouter to use History for redirect page
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import *as actions from '../actions/userActions'
+import axios from 'axios';
+
 
 
 class Applicant extends Component {
@@ -13,21 +15,30 @@ class Applicant extends Component {
             user_email : '',
             user_password :'',
             error: false,
-            login: false
+            login: false,
+            userLogData:[]
         };
         this.onSubmit = this.onSubmit.bind(this);
-        this.handleChange=this.handleChange.bind(this);
+        
         
     }
-
-    
+    async componentDidMount() {
+        try{
+            const response = await axios.get("https://secure-escarpment-96068.herokuapp.com/hardik/users/api/v1/users");
+                this.setState({userLogData: response.data});
+               
+            }
+        catch(e){
+                console.log("Error", e)
+            }
+    }
+   
     onSubmit= (event) =>{
        
-       
-       const{save_email,save_password}=this.props.loginData;
         const { user_email, user_password } = this.state;
-        this.setState({ error: false });
-        if (!(user_email === save_email && user_password === save_password)) {
+        const check_users = this.state.userLogData.filter(user => (user.email === user_email && user.password === user_password));
+       
+        if (check_users.length === 0) {
            this.setState({ error: true,login:false });
            alert("login failed")
            this.props.dispatch({
@@ -38,14 +49,17 @@ class Applicant extends Component {
             alert("login successful")
             this.setState({ error: false,login:true });
             this.props.history.push('/ApplicationForm');
+            this.props.dispatch({
+                type: actions.GET_LOGIN_SUCCESS,
+                payload: this.state,
+            });
+
             
         }
         event.preventDefault();
       }
 
-    handleChange(e, { name, value }) {
-        this.setState({ [name]: value });
-      }
+    
    
    
     render() {
@@ -63,18 +77,19 @@ class Applicant extends Component {
                             <div style={{backgroundColor:"#ededed"}}>
                                 <div className="card-body">
                                     <form onSubmit={this.onSubmit}>
-                                        <div className="form-group">
+                                        <div className="form-group text-left">
                                             <label htmlFor="InputEmail1">Email address</label>
-                                            <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
-                                            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                            <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="applicant@mail" value={this.state.user_email} onChange={(e)=>this.setState({user_email : e.target.value})} />
+                                            
                                         </div>
-                                        <div className="form-group">
+                                        <div className="form-group text-left">
                                             <label htmlFor="exampleInputPassword1">Password</label>
-                                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="***********"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
+                                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="1234"value={this.state.user_password} onChange={(e)=>this.setState({user_password : e.target.value})}/>
                                         </div>
+                                        <div className="text-right">
                                         
                                         <button type="submit" className="btn btn-primary">Log In</button>
-                                       
+                                        </div>
                                     </form> 
                                 </div> 
                             </div>   
@@ -88,7 +103,7 @@ class Applicant extends Component {
                                 <li>Check the status of your applications.</li>
                                 <li>Use your account with multiple applications.</li>
                             </ul>
-                            <a href="#">Register Now</a>
+                                <Link to="/signIn"> <button>Register Now</button> </Link>
                             </div>  
                         </div>
                     </div>

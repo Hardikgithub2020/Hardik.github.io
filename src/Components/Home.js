@@ -18,12 +18,12 @@ function Home(props) {
             <Amenities/>
             <Photo/>
             <div className="row">
-            <div className="card">
-            <Applicant/> 
-            </div>
-            <div className="card-body">
-            <ContactInformation/>
-            </div>
+                <div className="card">
+                    <Applicant/> 
+                </div>
+                <div className="card-body">
+                <ContactInformation/>
+                </div>
             </div>  
         </div>
     );

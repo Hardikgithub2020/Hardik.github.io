@@ -13,6 +13,7 @@ import Reservation from './Reservation';
 import EditReservation from  './EditReservation';
 import Explore from './Explore';
 import Owner from './Owner'
+import SignInForm from "./SignInForm";
 
 
 // ===========================================
@@ -64,8 +65,10 @@ function NewNavBar(props) {
                       </li>
                       
                       <li className="nav-item">
-                        <Link className="nav-link" to="/OWNER">MANAGEMENT</Link>
+                        <Link className="nav-link" to="/OWNER">RESERVATION</Link>
                       </li>
+                      
+                      
 {/* 
                       <li>
                         <Link className="nav-link" to="/Reservation">RESERVATION</Link>
@@ -115,6 +118,7 @@ function NewNavBar(props) {
               </Route>
               {/* Edit reservation has not link and get access through edit button in reservation list */}
               <Route exact path = '/editReservation/:id' component={EditReservation} />
+              <Route exact path = '/SignIn' component={SignInForm} />
               <Route path="/Explore">
                 <Explore />
               </Route>

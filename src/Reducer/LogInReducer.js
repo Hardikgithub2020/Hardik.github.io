@@ -5,19 +5,15 @@ export const initialState={
                         user_email : '',
                         user_password :''
                     },
-        save_email:'Hardik@mail',
+        save_email:'applicant@mail',
         save_password:"1234",
         haserror: false,
         login: false
-
-                
 
 }
 
 export default function LoginReducer(state=initialState, action){
     switch(action.type){
-
-
         case actions.GET_LOGIN_SUCCESS:
             return{...state, logIn_Info:action.payload, login: true, hasErrors:false};
 

@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import * as actions from "../actions/userActions";
+
 import axios from 'axios';
 import ContactInformation from "./ContactInformation";
 import { withRouter } from 'react-router-dom';
@@ -20,24 +20,19 @@ class ApplicationForm extends Component {
            numberOfResident:'',
            occupation:''
        }
-       this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this); 
+    this.handleChange = this.handleChange.bind(this);
+    
     this.onSubmit = this.onSubmit.bind(this);     
     }
     
-    handleSubmit= (event) =>{
-       
-        alert("Your application is submitted successfully, our representative contact you within two days");
-        this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
-       
-      }
+   
     
     handleChange= (event) => {
         let {name,value} = event.target;
         this.setState({ [name]: value });
       }
 
-      onSubmit=(event) =>{
+    onSubmit=(event) =>{
         alert("Your application is submitted successfully, our representative contact you within two days");
         event.preventDefault();
         let formData = {
@@ -132,16 +127,11 @@ class ApplicationForm extends Component {
                                             </form>
                                         </div>
                                         <ContactInformation/>
-                                        
-                                        
-                                    </div>
-                                   
+                                   </div>
                                 </div> 
                             </div>   
                         </div>
-                        
-                       
-                    </div>                   
+                      </div>                   
                 </div>
             </div>                     
         )
