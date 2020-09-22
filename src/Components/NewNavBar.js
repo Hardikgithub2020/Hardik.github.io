@@ -90,7 +90,7 @@ function NewNavBar(props) {
               <Route path="/Amenities">
                 <Amenities />
               </Route>
-              <Route exact path="/Applicant">
+              <Route  path="/Applicant">
                 <Applicant  />
               </Route>
               <Route path="/FloorPlan">
