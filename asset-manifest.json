@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Reservation/static/css/main.9779a3e1.chunk.css",
+    "main.js": "/Reservation/static/js/main.fe0beb50.chunk.js",
+    "main.js.map": "/Reservation/static/js/main.fe0beb50.chunk.js.map",
+    "runtime-main.js": "/Reservation/static/js/runtime-main.cb6b91c3.js",
+    "runtime-main.js.map": "/Reservation/static/js/runtime-main.cb6b91c3.js.map",
+    "static/js/2.553f5767.chunk.js": "/Reservation/static/js/2.553f5767.chunk.js",
+    "static/js/2.553f5767.chunk.js.map": "/Reservation/static/js/2.553f5767.chunk.js.map",
+    "index.html": "/Reservation/index.html",
+    "precache-manifest.2ebfa98e1020f4a97bc168373dde206a.js": "/Reservation/precache-manifest.2ebfa98e1020f4a97bc168373dde206a.js",
+    "service-worker.js": "/Reservation/service-worker.js",
+    "static/css/main.9779a3e1.chunk.css.map": "/Reservation/static/css/main.9779a3e1.chunk.css.map",
+    "static/js/2.553f5767.chunk.js.LICENSE.txt": "/Reservation/static/js/2.553f5767.chunk.js.LICENSE.txt",
+    "static/media/BathRoom2.jpg": "/Reservation/static/media/BathRoom2.1d6eb565.jpg",
+    "static/media/Home.css": "/Reservation/static/media/PlayZone.173d77ea.jpg",
+    "static/media/Bedroom2.jpg": "/Reservation/static/media/Bedroom2.26b10330.jpg",
+    "static/media/Complex.jpg": "/Reservation/static/media/Complex.7d870701.jpg",
+    "static/media/Complex2.jpg": "/Reservation/static/media/Complex2.64899aff.jpg",
+    "static/media/FloorPlan_Cypress_3b2Bath.jpeg": "/Reservation/static/media/FloorPlan_Cypress_3b2Bath.f08a2582.jpeg",
+    "static/media/FloorPlan_Dogwood.jpeg": "/Reservation/static/media/FloorPlan_Dogwood.2977cf23.jpeg",
+    "static/media/FloorPlan_SugarMaple_2B1Bath.jpeg": "/Reservation/static/media/FloorPlan_SugarMaple_2B1Bath.d60bdb85.jpeg",
+    "static/media/FloorPlan_Sycamore_2b2Bath2floor.jpeg": "/Reservation/static/media/FloorPlan_Sycamore_2b2Bath2floor.1ac19bf5.jpeg",
+    "static/media/FloorPlan_sassafras_2B2B.jpeg": "/Reservation/static/media/FloorPlan_sassafras_2B2B.af7f6537.jpeg",
+    "static/media/Floorplan_Magnolia_1B1B.jpeg": "/Reservation/static/media/Floorplan_Magnolia_1B1B.4815836c.jpeg",
+    "static/media/LivingRoom.jpg": "/Reservation/static/media/LivingRoom.908f0ebc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb6b91c3.js",
+    "static/js/2.553f5767.chunk.js",
+    "static/css/main.9779a3e1.chunk.css",
+    "static/js/main.fe0beb50.chunk.js"
+  ]
+}
