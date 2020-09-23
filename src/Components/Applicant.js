@@ -66,11 +66,11 @@ class Applicant extends Component {
         
         return (
             <React.Fragment>
-            <div className="Applicant">
+            <div className="Applicant"style={{padding:"20%",paddingTop:"10%"}}>
 
-                <div className="card "style={{margin:"10%"}}>
+                <div className="card ">
                     <div className="card-group" >
-                        <h3 style={{fontFamily:"fantasy"}}>LOG - IN</h3>
+                        <h3 style={{fontFamily:"cursive"}}>LOG - IN</h3>
                     </div>
                     <div className="card-group" >
                         <div className='card-body'>

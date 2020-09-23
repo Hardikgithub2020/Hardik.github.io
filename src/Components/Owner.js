@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/userActions";
 import { withRouter } from 'react-router-dom';
-import axios from "axios"
+import axios from "axios";
+import '../CSS/Owner.css'
 
 
 
@@ -63,6 +64,8 @@ class Owner extends Component {
     render() {
         
         return (
+            <div className="Owner"style={{padding:"15%"}}>
+            <div className="container">
             <div className="card  " style={{maxWidth:"25rem",backgroundColor:"#e4f0ee" }} >
                 <h4 className="card-header">LogIn</h4>  
 
@@ -83,6 +86,8 @@ class Owner extends Component {
                     </form>
                 </div>
             </div> 
+            </div>
+            </div>
         );
     }
 }

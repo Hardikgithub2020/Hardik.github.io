@@ -4,7 +4,7 @@ import '../CSS/Aminities.css'
 function Amenities(props) {
     return (
         <div className="aminities" >
-            <div className="container-fluid" style={{background:'white'}}>
+            <div className="container-fluid" style={{background:'white', marginTop:"5vh"}}>
                 <h1 style={{fontFamily:'fantasy',margin:'5%'}}>AMENITIES</h1>
                 <div className="aminities-Container" >
                     <div className="card-group">

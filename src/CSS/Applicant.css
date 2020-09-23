@@ -1,20 +1,9 @@
-/* .Applicant{
+ .Applicant{
     background-image: url("https://www.thehouseshop.com/property-blog/wp-content/uploads/2018/04/Tenancy-Agreement.jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.applicant-form{
-   
-    border: solid 2px silver;
-    background-color: steelblue;
-    padding: 50px;
     
 
-} */
+}

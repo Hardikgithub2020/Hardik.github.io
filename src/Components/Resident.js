@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as actions from '../actions/userActions';
 import {connect} from 'react-redux';
+import '../CSS/Resident.css'
 
 
 
@@ -47,8 +48,9 @@ class Resident extends Component {
     render() {
        
         return (
+            <div className="Resident" style={{padding:"10%"}}>
 
-                <div className="card" style={{margin:"10%"}}>
+                <div className="card" >
                     
                 <div className="card-group" >
                     <div className='card-body'>
@@ -99,6 +101,7 @@ class Resident extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
