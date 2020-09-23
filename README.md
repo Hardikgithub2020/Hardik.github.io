@@ -1,5 +1,5 @@
 
-Deployed link :https://hardikgithub2020.github.io/Reservation/
+Deployed link :https://hardikgithub2020.github.io/myapartment/
 
 Problem Statement :
 
