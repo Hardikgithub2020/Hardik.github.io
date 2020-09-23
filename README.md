@@ -1,7 +1,13 @@
 
-Deployed link :https://hopeful-nightingale-c7e733.netlify.app
+Deployed link (FIrebase) :
 
-Problem Statement :
+ https://reservation-app-8e086.web.app
+
+Heroku github link for backend :
+
+https://git.heroku.com/secure-escarpment-96068.git
+
+Heroku github link for backend: Problem Statement :
 
 Apartment rental company looking for online platform to reach to customer 
 
