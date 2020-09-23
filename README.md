@@ -1,5 +1,5 @@
 
-Deployed link :https://hardikgithub2020.github.io/Reservation.github.io/
+Deployed link :https://hardikgithub2020.github.io/Hardik.github.io/.
 
 Problem Statement :
 
