@@ -1,5 +1,5 @@
 
-# Deployed link (FIrebase) :
+# Deployed link (Firebase) :
 
  https://reservation-app-8e086.web.app
 
@@ -7,21 +7,20 @@
 
 https://git.heroku.com/secure-escarpment-96068.git
 
-# Heroku github link for backend: Problem Statement :
+# Problem Statement :
 
 Apartment rental company looking for online platform to reach to customer 
 
 # Solution :
 
-This application provide information about service provider and their service  to users and user also submit online application . 
+This application provide information about service provider and their service to new tenant and their submission for online application . 
 
-Give the list of breweries according to search.
 
-+==================================================================================================================
+# Capstone Project :
 
 The capstone project will be to build an E-commerce web application. Students will decide what the E-Commerce site will be on. By the end of the course, the project should have the following:
 
-# Github Requirements
+# Github Requirements :
 
 * Hosted on github pages
 * Commits to github every day
@@ -34,7 +33,7 @@ The capstone project will be to build an E-commerce web application. Students wi
 * Git repo has at least 30 git commit
  
 
-# Frontend Requirements 
+# Frontend Requirements :
 
 * The code should be written in ES6 as much as possible
 * Use the create-react-app generator to start your project.
@@ -53,12 +52,18 @@ The capstone project will be to build an E-commerce web application. Students wi
 * App renders in browser
  
 
-# Backend Requirements
+# Backend Requirements :
 
 * Uses Postgres as a SQL database
 * Uses Spring Boot w/Maven as a build tool
 * Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase
 * App must include full CRUD capabilities
+
+# Resources :
+
+* https://reactrouter.com/
+* https://reactjs.org/
+* https://react-bootstrap.github.io/getting-started/introduction/
  
 
 
