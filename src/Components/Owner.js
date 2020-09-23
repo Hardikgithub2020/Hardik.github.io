@@ -46,11 +46,12 @@ class Owner extends Component {
         }else{
             alert("login successful")
             this.setState({ error: false,login:true });
-            this.props.history.push('/ApplicationForm');
+            
             this.props.dispatch({
                 type: actions.GET_LOGIN_SUCCESS,
                 payload: this.state,
             });
+            this.props.history.push('/Reservation');
 
             
         }
