@@ -2,7 +2,7 @@
     background-image: url("https://www.thehouseshop.com/property-blog/wp-content/uploads/2018/04/Tenancy-Agreement.jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 90vh;
+    min-height: 100vh;
     width: 100%;
     
 

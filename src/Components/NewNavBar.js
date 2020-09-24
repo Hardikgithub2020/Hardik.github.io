@@ -27,7 +27,8 @@ function NewNavBar(props) {
   return (
     <div>
          <Router>
-            <nav className="navbar navbar-expand-lg navbar-light" style={{background :'#fcba03' }}>
+            <nav className="navbar navbar-expand-lg navbar-light " style={{background :'#fcba03' }}>
+            <a class="navbar-brand" href="#"><h1 style={{background:"none",opacity:"0.2",fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1> </a>
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -40,9 +41,7 @@ function NewNavBar(props) {
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <span >
-                      <h1 style={{background:"none",opacity:"0.2",fontFamily:'fantasy', color:"grey"}}>RESERVATION</h1>                         
-                  </span>
+                 
                   <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                       <li className="nav-item active">
                         <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>

@@ -66,7 +66,7 @@ class Applicant extends Component {
         
         return (
             <React.Fragment>
-            <div className="Applicant"style={{padding:"20%",paddingTop:"10%"}}>
+            <div className="Applicant"style={{paddingLeft:"20%",paddingRight:"20%",paddingTop:"10%"}}>
 
                 <div className="card ">
                     <div className="card-group" >
@@ -103,7 +103,7 @@ class Applicant extends Component {
                                 <li>Check the status of your applications.</li>
                                 <li>Use your account with multiple applications.</li>
                             </ul>
-                                <Link to="/signIn"> <button>Register Now</button> </Link>
+                                <Link to="/signIn"> <button className="btn btn-primary">Register Now</button> </Link>
                             </div>  
                         </div>
                     </div>

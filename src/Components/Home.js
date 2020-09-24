@@ -22,7 +22,7 @@ function Home(props) {
                     <Applicant/> 
                 </div>
                 <div className="card-body">
-                <ContactInformation/>
+                    <ContactInformation/>
                 </div>
             </div>  
         </div>
