@@ -48,9 +48,9 @@ export default class Explore extends Component {
         });
     
     return (
-              <div >
-                <h1 id="explore-header" style={{fontFamily:"cursive"}}>EXPLORE NEARBY RESTAURANT</h1>
-                <div className="explore row" style={{margin:"auto"}}>
+              <div className="Explore">
+                <h1 id="explore-header" style={{fontFamily:"cursive",color:"#fc7303"}}>EXPLORE NEARBY RESTAURANT</h1>
+                <div className="row" style={{margin:"auto"}}>
                   {displayDataForRestaurants}
                 </div>  
               </div>

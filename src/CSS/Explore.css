@@ -1,6 +1,9 @@
-explore{
+.Explore{
+    background-image: url("https://www.travelmag.com/wp-content/uploads/2018/02/Nada-Cinci.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
     display : flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    text-align: left;
+    
 }
