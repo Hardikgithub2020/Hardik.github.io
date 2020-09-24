@@ -3,9 +3,9 @@
 
  https://reservation-app-8e086.web.app
 
-# Heroku github link for backend :
+# Repository link for backend :
 
-https://git.heroku.com/secure-escarpment-96068.git
+https://github.com/Hardikgithub2020/apartment_backend-folder
 
 # Problem Statement :
 
