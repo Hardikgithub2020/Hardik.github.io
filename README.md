@@ -7,6 +7,15 @@
 
 https://github.com/Hardikgithub2020/apartment_backend-folder
 
+# Technology used :
+
+* React, Bootstrap and axios for frontend.
+* Spring-boot, Heroku  and PostgreSQL for backend.
+
+# API used :
+
+* https://www.zomato.com/cincinnati
+
 # Problem Statement :
 
 Apartment rental company looking for online platform to reach to customer 
@@ -64,6 +73,8 @@ The capstone project will be to build an E-commerce web application. Students wi
 * https://reactrouter.com/
 * https://reactjs.org/
 * https://react-bootstrap.github.io/getting-started/introduction/
+
+
  
 
 
