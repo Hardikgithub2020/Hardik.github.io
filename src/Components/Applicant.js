@@ -65,8 +65,9 @@ class Applicant extends Component {
     render() {
         
         return (
-            <React.Fragment>
-            <div className="Applicant"style={{paddingLeft:"20%",paddingRight:"20%",paddingTop:"10%"}}>
+            
+            <div className="Applicant"  >
+            <div className=""style={{paddingLeft:"20%",paddingRight:"20%",paddingTop:"10%"}}>
 
                 <div className="card ">
                     <div className="card-group" >
@@ -109,7 +110,8 @@ class Applicant extends Component {
                     </div>
                 </div>
             </div>
-            </React.Fragment>
+            </div>
+           
         );
     }
 }

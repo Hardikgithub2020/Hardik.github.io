@@ -42,7 +42,7 @@ function NewNavBar(props) {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                  
-                  <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                  <ul className="navbar-nav mr-auto mt-2 mt-lg-0" style={{fontSize:"10px"}}>
                       <li className="nav-item active">
                         <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
                       </li>

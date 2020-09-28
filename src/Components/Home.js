@@ -9,22 +9,22 @@ import FloorPlan from './FloorPlan';
 
 function Home(props) {
     return (
-        <div className="Home-Page">
-            <div className= "welcome-tag">
-                <h1 style={{fontFamily:"cursive"   , color:"white", padding:"10vh",fontStretch:"ultra-expanded"}}>WELCOME TO RESERVATION</h1>
+        <div className="Home-Page" >
+            <div className= "welcome-tag" style={{fontFamily:"cursive"   , color:"white", paddingTop:"10vh",fontStretch:"ultra-expanded"}}>
+                <h1 >WELCOME TO RESERVATION</h1>
             </div>
             <About/>
             <FloorPlan/>
             <Amenities/>
             <Photo/>
-            <div className="row">
-                <div className="card">
+           
+                
                     <Applicant/> 
-                </div>
-                <div className="card-body">
+                    <div className="card-body">
                     <ContactInformation/>
-                </div>
-            </div>  
+                    </div>
+                
+             
         </div>
     );
 }

@@ -32,7 +32,7 @@ export default class Explore extends Component {
   render() {
       let displayDataForRestaurants = this.state.restaurants.map((res,i) =>{
             return (
-                        <div className="collections card text-white text-left bg-info mb-3" style={{maxWidth: "18rem",margin:"2vw"}}  key={i}>
+                        <div className="collections card text-white text-left bg-info mb-3" style={{maxWidth: "18rem",margin:"2rem"}}  key={i}>
                             <h4 className="card-header" >{res.restaurant.name.toUpperCase()}</h4>
                             <div className="card-body">
                               <p className="card-text">Services : {res.restaurant.highlights.toString()}</p>  
