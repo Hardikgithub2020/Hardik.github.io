@@ -67,9 +67,9 @@ class Applicant extends Component {
         return (
             
             <div className="Applicant"  >
-            <div className=""style={{paddingLeft:"20%",paddingRight:"20%",paddingTop:"10%"}}>
+            <div className="">
 
-                <div className="card ">
+                <div className="card justify-content">
                     <div className="card-group" >
                         <h3 style={{fontFamily:"cursive"}}>LOG - IN</h3>
                     </div>

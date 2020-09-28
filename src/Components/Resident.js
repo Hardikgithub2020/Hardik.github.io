@@ -48,7 +48,7 @@ class Resident extends Component {
     render() {
        
         return (
-            <div className="Resident" style={{padding:"10%"}}>
+            <div className="Resident" >
 
                 <div className="card" >
                     

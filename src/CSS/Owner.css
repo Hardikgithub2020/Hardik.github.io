@@ -13,6 +13,8 @@
     font-size: xx-large;
     text-shadow: 3px 3px black;
     color:aquamarine; 
+    display:flex;
+    align-items: center;
 
     
 }

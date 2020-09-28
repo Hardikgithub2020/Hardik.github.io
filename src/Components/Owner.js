@@ -64,7 +64,7 @@ class Owner extends Component {
     render() {
         
         return (
-            <div className="Owner"style={{padding:"15%"}}>
+            <div className="Owner">
             <div className="container">
             <div className="card  " style={{maxWidth:"25rem",backgroundColor:"#e4f0ee" }} >
                 <h4 className="card-header">LogIn</h4>  

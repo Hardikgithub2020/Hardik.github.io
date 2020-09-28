@@ -2,7 +2,10 @@
     background-image: url("https://vista.today/wp-content/uploads/2019/10/The-clubhouse-at-Arlo-a-new-apartment-complex-in-Malvern..jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 93vh;
+    min-height: 90vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 } 
