@@ -104,7 +104,9 @@ class Applicant extends Component {
                                 <li>Check the status of your applications.</li>
                                 <li>Use your account with multiple applications.</li>
                             </ul>
-                                <Link to="/signIn"> <button className="btn btn-primary">Register Now</button> </Link>
+                            <div className='text-right'>
+                                <Link to="/signIn" > <button className="btn btn-primary ">Register Now</button> </Link>
+                                </div>
                             </div>  
                         </div>
                     </div>

@@ -124,7 +124,7 @@ class ApplicationForm extends Component {
                                                     <input name="occupation" type="text" className="form-control" id="exampleFormControlInput5" value={this.state.occupation} onChange={this.handleChange} required/>
                                                 </div>
                                                 
-                                                <button className="btn btn-primary" type="submit">Submit form</button>
+                                                <button className="btn btn-primary pull-right" type="submit">Submit form</button>
                                             </form>
                                         </div>
                                         <ContactInformation/>
