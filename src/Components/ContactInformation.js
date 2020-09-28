@@ -4,7 +4,7 @@ function ContactInformation(props) {
     return (
        
             <section className="contactInfo" >
-
+                 <br/>  
                 <div id="office-phone">
                     <h1>Call Us</h1>
                     <h3 className="normal" id="phone-number">
@@ -14,13 +14,14 @@ function ContactInformation(props) {
                          <a href="tel: (000)-000-0000" className="click_to_call_href sclick_to_call_href_contactus"><span className="click_to_call">(999)-999-9999</span></a>               
                     </h3>    
                 </div> 
-                <hr/>                                   
+                <hr/> 
+                <br/>                                
                 <dl className="dl-horizontal" id="office_hours">
                     <dt className="office_hours_today">Monday</dt>
                     <dd className="ole_hours_today">9AM-5PM</dd>
                     <dt>Tuesday</dt>
                     <dd>9AM-5PM</dd>
-                    <dt>Wednesday</dt> .
+                    <dt>Wednesday</dt> 
                     <dd>9AM-7PM</dd>
                     <dt>Thursday</dt>
                     <dd>9AM-5PM</dd>
@@ -29,7 +30,11 @@ function ContactInformation(props) {
                     <dt>Saturday</dt>
                     <dd>10AM-4PM</dd>
                 </dl> 
+                <br/>  
                 <hr/>
+                <hr/>
+                <hr/>
+                <br/>
                 <h1 style={{fontFamily:'fantasy', color:"grey",fontSize:"1.5rem"}}>RESERVATION</h1>         
             </section>                           
       

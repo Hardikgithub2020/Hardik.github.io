@@ -36,8 +36,8 @@ export default class Reservation extends Component {
     render(){
     
        return(
-        <div className="manage-container">
-            <Table  striped bordered hover size="sm" style={{backgroundColor: 'lightgray'}}>
+        <div className="manage-container table-responsive{-sm|-md|-lg|-xl}" style={{overflow:"auto"}}>
+            <Table  className="table" striped bordered hover size="sm" style={{backgroundColor: 'lightgray'}}>
                 <thead>
                     <tr>
                         <th>First Name</th>
