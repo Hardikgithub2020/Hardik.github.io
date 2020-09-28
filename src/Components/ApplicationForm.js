@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import '../CSS/ApplicationForm.css'
 
 import axios from 'axios';
 import ContactInformation from "./ContactInformation";
@@ -67,7 +68,7 @@ class ApplicationForm extends Component {
     render(){ 
         return (
             <div className="ApplicationForm">
-               <div className="card" style={{marginLeft:"15%", marginRight:"15%"}}>
+               <div className="card" >
                     <div className="card-group" >
                         <h3 style={{fontFamily:"fantasy"}}>Application Form</h3>
                     </div>
