@@ -55,7 +55,6 @@ class SignInForm extends Component {
                     password:this.state.user_password
                 }
                 this.postAPI(formData);
-                this.props.dispatch({type: actions.GET_REGISTRATION_SUCCESS, payload: this.state});
                 this.props.history.push('/Applicant');
                 
         }

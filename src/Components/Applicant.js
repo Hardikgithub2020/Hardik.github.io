@@ -39,15 +39,13 @@ class Applicant extends Component {
         const check_users = this.state.userLogData.filter(user => (user.email === user_email && user.password === user_password));
        
         if (check_users.length === 0) {
-           this.setState({ error: true,login:false });
            alert("login failed")
            this.props.dispatch({
-            type: actions.GET_LOGIN_SUCCESS,
-            payload: this.state,
+            type: actions.GET_LOGIN_FAILURE,
+            
         });
         }else{
             alert("login successful")
-            this.setState({ error: false,login:true });
             this.props.history.push('/ApplicationForm');
             this.props.dispatch({
                 type: actions.GET_LOGIN_SUCCESS,

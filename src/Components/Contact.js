@@ -20,10 +20,6 @@ class Contact extends Component {
 
     handleSubmit = (event) => {
         alert("Thank you for your interest, Our representative will contact you ");
-        this.props.dispatch({
-            type: actions.GET_REGISTRATION_SUCCESS,
-            payload: this.state,
-        });
         event.preventDefault();
     };
     render() {

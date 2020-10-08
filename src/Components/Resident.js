@@ -13,8 +13,6 @@ class Resident extends Component {
         this.state={
             user_email : '',
             user_password :'',
-            error: false,
-            login: false
         };
         this.onSubmit = this.onSubmit.bind(this);  
     }
@@ -26,7 +24,6 @@ class Resident extends Component {
         const { user_email, user_password } = this.state;
         this.setState({ error: false });
         if (!(user_email === save_email && user_password === save_password)) {
-           this.setState({ error: true,login:false });
            alert("login failed")
            this.props.dispatch({
             type: actions.GET_LOGIN_FAILURE,
